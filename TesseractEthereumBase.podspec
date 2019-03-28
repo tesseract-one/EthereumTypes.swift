@@ -22,5 +22,5 @@ Base classes and protocols for Ethereum support in Tesseract.
 
   s.dependency 'BigInt', '~> 3.1'
   s.dependency 'CryptoSwift', '~> 0.15'
-  s.dependency 'SerializableValue', '~> 0.1'
+  s.dependency 'SerializableValue', '~> 0.0.1'
 end
