@@ -1,0 +1,24 @@
+PODS:
+  - BigInt (3.1.0):
+    - SipHash (~> 1.2)
+  - CryptoSwift (0.15.0)
+  - SipHash (1.2.2)
+
+DEPENDENCIES:
+  - BigInt (~> 3.1)
+  - CryptoSwift (~> 0.15)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BigInt
+    - CryptoSwift
+    - SipHash
+
+SPEC CHECKSUMS:
+  BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
+  CryptoSwift: 769f58a9e89f64e8796c2e59ce5f002dc81a2438
+  SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
+
+PODFILE CHECKSUM: 042abee3a4412a73e17b8e7a8d5bfdbe39569d0c
+
+COCOAPODS: 1.6.1
