@@ -1,5 +1,5 @@
 use_modular_headers!
-platform :ios, '8.0'
+platform :ios, '10.0'
 
 inhibit_all_warnings!
 
