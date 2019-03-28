@@ -2,11 +2,13 @@ PODS:
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
   - CryptoSwift (0.15.0)
+  - SerializableValue (0.0.1)
   - SipHash (1.2.2)
 
 DEPENDENCIES:
   - BigInt (~> 3.1)
   - CryptoSwift (~> 0.15)
+  - SerializableValue (from `https://github.com/ypopovych/swift-serializable.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -14,11 +16,22 @@ SPEC REPOS:
     - CryptoSwift
     - SipHash
 
+EXTERNAL SOURCES:
+  SerializableValue:
+    :branch: master
+    :git: https://github.com/ypopovych/swift-serializable.git
+
+CHECKOUT OPTIONS:
+  SerializableValue:
+    :commit: 64fdfaa9ba6baaf43021912ea3be193d435e5fa4
+    :git: https://github.com/ypopovych/swift-serializable.git
+
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   CryptoSwift: 769f58a9e89f64e8796c2e59ce5f002dc81a2438
+  SerializableValue: 3e44a12393f7bf8dfb08e9f804f9c7f749c13131
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
 
-PODFILE CHECKSUM: 042abee3a4412a73e17b8e7a8d5bfdbe39569d0c
+PODFILE CHECKSUM: 029d235498d49aa54deb7a2fa1c29fe03aa19e61
 
 COCOAPODS: 1.6.1

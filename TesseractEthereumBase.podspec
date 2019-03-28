@@ -14,7 +14,7 @@ Base classes and protocols for Ethereum support in Tesseract.
   s.source           = { :git => 'https://github.com/tesseract.1/swift-ethereum-base.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/tesseract_io'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '8.0'
 
   s.module_name = 'EthereumBase'
 
@@ -22,4 +22,5 @@ Base classes and protocols for Ethereum support in Tesseract.
 
   s.dependency 'BigInt', '~> 3.1'
   s.dependency 'CryptoSwift', '~> 0.15'
+  s.dependency 'SerializableValue', '~> 0.1'
 end

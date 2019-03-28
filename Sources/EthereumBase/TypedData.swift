@@ -21,6 +21,7 @@
 import Foundation
 import CryptoSwift
 import BigInt
+import Serializable
 
 public struct TypedData: Codable {
     
