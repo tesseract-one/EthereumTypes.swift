@@ -24,7 +24,7 @@ public enum SignProviderError: Error {
     case accountDoesNotExist(Address)
     case emptyAccount
     case mandatoryFieldMissing(String)
-    case emptyResponse(String)
+    case cancelled
     case nonIntNetworkVersion(String)
     case internalError(Error)
 }
