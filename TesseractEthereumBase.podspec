@@ -16,6 +16,8 @@ Base classes and protocols for Ethereum support in Tesseract.
 
   s.ios.deployment_target = '8.0'
 
+  s.pod_target_xcconfig = { 'APPLICATION_EXTENSION_API_ONLY' => 'YES' }
+
   s.module_name = 'EthereumBase'
 
   s.source_files = 'Sources/EthereumBase/**/*.swift'
