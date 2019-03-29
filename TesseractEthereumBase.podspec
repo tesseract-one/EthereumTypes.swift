@@ -7,12 +7,12 @@ Pod::Spec.new do |s|
 Base classes and protocols for Ethereum support in Tesseract.
                        DESC
 
-  s.homepage         = 'https://github.com/tesseract.1/swift-ethereum-base'
+  s.homepage         = 'https://github.com/tesseract-one/swift-ethereum-base'
 
   s.license          = { :type => 'Apache 2.0', :file => 'LICENSE' }
   s.author           = { 'Tesseract Systems, Inc.' => 'info@tesseract.one' }
-  s.source           = { :git => 'https://github.com/tesseract.1/swift-ethereum-base.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/tesseract_io'
+  s.source           = { :git => 'https://github.com/tesseract-one/swift-ethereum-base.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/tesseract_one'
 
   s.ios.deployment_target = '8.0'
 
