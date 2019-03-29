@@ -22,7 +22,7 @@ Base classes and protocols for Ethereum support in Tesseract.
     ss.source_files = 'Sources/EthereumBase/**/*.swift'
 
     ss.dependency 'BigInt', '~> 3.1'
-    ss.dependency 'CryptoSwift', '~> 0.15'
+    ss.dependency 'CryptoSwift', '~> 0.13'
     ss.dependency 'SerializableValue', '~> 0.0.1'
   end
 
