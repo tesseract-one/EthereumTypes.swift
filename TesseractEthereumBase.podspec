@@ -18,9 +18,20 @@ Base classes and protocols for Ethereum support in Tesseract.
 
   s.module_name = 'EthereumBase'
 
-  s.source_files = 'Sources/EthereumBase/**/*.swift'
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'Sources/EthereumBase/**/*.swift'
 
-  s.dependency 'BigInt', '~> 3.1'
-  s.dependency 'CryptoSwift', '~> 0.15'
-  s.dependency 'SerializableValue', '~> 0.0.1'
+    ss.dependency 'BigInt', '~> 3.1'
+    ss.dependency 'CryptoSwift', '~> 0.15'
+    ss.dependency 'SerializableValue', '~> 0.0.1'
+  end
+
+  s.subspec 'PromiseKit' do |ss|
+    ss.source_files = 'Sources/PromiseKit/**/*.swift'
+
+    ss.dependency 'TesseractEthereumBase/Core'
+    ss.dependency 'PromiseKit/CorePromise', '~> 6.8.0'
+  end
+
+  s.default_subspecs = 'Core'
 end
