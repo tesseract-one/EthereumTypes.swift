@@ -33,7 +33,7 @@ public enum SignProviderError: Error {
 
 public protocol SignProvider {
     
-    typealias Response<Type> = (Result<Type, SignProviderError>) -> Void
+    typealias Response<Type> = (Swift.Result<Type, SignProviderError>) -> Void
     
     func eth_accounts(networkId: UInt64, response: @escaping Response<Array<Address>>)
     
