@@ -22,7 +22,7 @@ import Foundation
 
 // Place for API registration
 public struct APIRegistry {
-    let signProvider: SignProvider
+    public let signProvider: SignProvider
     
     public init(signProvider: SignProvider) {
         self.signProvider = signProvider
