@@ -19,6 +19,7 @@
 		927C59D8224D0CF000F2AA50 /* TypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D1224D0CF000F2AA50 /* TypedData.swift */; };
 		927C59DA224D0E0900F2AA50 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D9224D0E0900F2AA50 /* Address.swift */; };
 		927C59DC224D0E7100F2AA50 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59DB224D0E7100F2AA50 /* DataItem.swift */; };
+		927C5AC4224E721A00F2AA50 /* APIRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5AC3224E721A00F2AA50 /* APIRegistry.swift */; };
 		E427D738528B77853525A8EC /* libPods-EthereumBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF06F099E5DA7E9A63CA2AD /* libPods-EthereumBase.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		927C59D9224D0E0900F2AA50 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		927C59DB224D0E7100F2AA50 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
 		927C59E1224D141300F2AA50 /* TesseractEthereumBase.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = TesseractEthereumBase.podspec; sourceTree = "<group>"; };
+		927C5AC3224E721A00F2AA50 /* APIRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRegistry.swift; sourceTree = "<group>"; };
 		A678BD3C1B362C16A21C5528 /* Pods-EthereumBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumBase.release.xcconfig"; path = "Target Support Files/Pods-EthereumBase/Pods-EthereumBase.release.xcconfig"; sourceTree = "<group>"; };
 		B28C1A20DF740ED495632C31 /* Pods-Ethereum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ethereum.release.xcconfig"; path = "Target Support Files/Pods-Ethereum/Pods-Ethereum.release.xcconfig"; sourceTree = "<group>"; };
 		B4DBAC2F2FD0029BF57C8800 /* Pods-EthereumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumTests.release.xcconfig"; path = "Target Support Files/Pods-EthereumTests/Pods-EthereumTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				927C59CA224D0CF000F2AA50 /* SignProvider.swift */,
 				927C59D0224D0CF000F2AA50 /* Transaction.swift */,
 				927C59DB224D0E7100F2AA50 /* DataItem.swift */,
+				927C5AC3224E721A00F2AA50 /* APIRegistry.swift */,
 				927C59B2224D0BE800F2AA50 /* Info.plist */,
 			);
 			path = EthereumBase;
@@ -343,6 +346,7 @@
 				927C59D4224D0CF000F2AA50 /* SolidityWrappedValue.swift in Sources */,
 				927C59D5224D0CF000F2AA50 /* ABIEncoder.swift in Sources */,
 				927C59DC224D0E7100F2AA50 /* DataItem.swift in Sources */,
+				927C5AC4224E721A00F2AA50 /* APIRegistry.swift in Sources */,
 				927C59D6224D0CF000F2AA50 /* SolidityType.swift in Sources */,
 				927C59D8224D0CF000F2AA50 /* TypedData.swift in Sources */,
 				927C59DA224D0E0900F2AA50 /* Address.swift in Sources */,
