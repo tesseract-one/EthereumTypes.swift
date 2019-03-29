@@ -19,8 +19,9 @@
 //
 
 import Foundation
-import BigInt
 import CryptoSwift
+
+@_exported import BigInt
 
 
 public struct Transaction {

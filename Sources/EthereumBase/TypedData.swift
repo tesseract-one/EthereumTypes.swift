@@ -21,7 +21,8 @@
 import Foundation
 import CryptoSwift
 import BigInt
-import Serializable
+
+@_exported import Serializable
 
 public struct TypedData: Codable {
     
