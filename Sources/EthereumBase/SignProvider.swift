@@ -20,6 +20,8 @@
 
 import Foundation
 
+public let ETHEREUM_SLIP44_COIN_ID: UInt32 = 0x8000003c
+
 public enum SignProviderError: Error {
     case accountDoesNotExist(Address)
     case emptyAccount
