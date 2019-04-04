@@ -8,9 +8,9 @@ PODS:
 
 DEPENDENCIES:
   - BigInt (~> 3.1)
-  - CryptoSwift (~> 0.15)
+  - CryptoSwift (~> 0.13)
   - PromiseKit/CorePromise (~> 6.8.0)
-  - SerializableValue (from `https://github.com/ypopovych/swift-serializable.git`, branch `master`)
+  - SerializableValue (from `https://github.com/tesseract-one/swift-serializable.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,20 +22,20 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   SerializableValue:
     :branch: master
-    :git: https://github.com/ypopovych/swift-serializable.git
+    :git: https://github.com/tesseract-one/swift-serializable.git
 
 CHECKOUT OPTIONS:
   SerializableValue:
-    :commit: 10f23664e16c600002178cece070722c09e7b7c1
-    :git: https://github.com/ypopovych/swift-serializable.git
+    :commit: a77ea4589520eac0406912dca1dc54466ffa82ac
+    :git: https://github.com/tesseract-one/swift-serializable.git
 
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   CryptoSwift: 769f58a9e89f64e8796c2e59ce5f002dc81a2438
   PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
-  SerializableValue: 68b0bc3f578c45f99279bc0297213a57ec532663
+  SerializableValue: 4dec77eadb50f94f4070f84a8826c51bc481e9cd
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
 
-PODFILE CHECKSUM: 71c5f0e9a319fe202e70f12f088820c0a01c15aa
+PODFILE CHECKSUM: 6ae05fb1f219280cbc37fc68c2d8f5a9f8a65b4f
 
 COCOAPODS: 1.6.1
