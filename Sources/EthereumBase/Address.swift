@@ -108,6 +108,20 @@ public struct Address: Codable, RawRepresentable {
         }
     }
     
+    // MARK: - Initialization
+    /**
+    * Initializes this instance of `EthereumAddress` with the given `hex` String.
+    *
+    * `hex` must be either 40 characters (20 bytes) or 42 characters (with the 0x hex prefix) long.
+    *
+    *  Will try to figure out eip55 based on mixed case in string.
+    */
+    public init(hex: String) throws {
+        let eip55 = hex.rangeOfCharacter(from: Address.hecadecimalLettersUppercased) != nil
+            && hex.rangeOfCharacter(from: Address.hecadecimalLettersLowercased) != nil
+        try self.init(hex: hex, eip55: eip55)
+    }
+    
     /**
      * Initializes a new instance of `EthereumAddress` with the given raw Bytes array.
      *
@@ -190,6 +204,10 @@ public struct Address: Codable, RawRepresentable {
         "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
         "a", "b", "c", "d", "e", "f", "A", "B", "C", "D", "E", "F"
     ]
+    
+    private static let hecadecimalLettersUppercased: CharacterSet = ["A", "B", "C", "D", "E", "F"]
+    
+    private static let hecadecimalLettersLowercased: CharacterSet = ["a", "b", "c", "d", "e", "f"]
     
     private static let hexadecimalNumbers: CharacterSet = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 }
