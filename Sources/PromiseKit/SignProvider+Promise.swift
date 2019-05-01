@@ -1,6 +1,6 @@
 //
 //  SignProvider+Promise.swift
-//  EthereumBase
+//  EthereumTypes
 //
 //  Created by Yehor Popovych on 3/29/19.
 //  Copyright © 2019 Tesseract Systems, Inc. All rights reserved.
@@ -18,8 +18,13 @@
 //  limitations under the License.
 //
 
+
 import Foundation
 import PromiseKit
+
+#if !COCOAPODS
+    import EthereumTypes
+#endif
 
 public extension SignProvider {
     func eth_accounts(networkId: UInt64) -> Promise<Array<Address>> {

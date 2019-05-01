@@ -1,6 +1,6 @@
 //
-//  EthereumBaseTests.swift
-//  EthereumBaseTests
+//  EthereumTypesTests.swift
+//  EthereumTypesTests
 //
 //  Created by Yehor Popovych on 3/28/19.
 //  Copyright © 2019 Tesseract Systems, Inc. All rights reserved.
@@ -19,9 +19,9 @@
 //
 
 import XCTest
-@testable import EthereumBase
+@testable import EthereumTypes
 
-class EthereumBaseTests: XCTestCase {
+class EthereumTypesTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

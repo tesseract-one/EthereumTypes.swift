@@ -27,3 +27,8 @@ Pods/
 
 # Carthage
 Carthage/
+Cartfile.resolved
+
+# SPM
+.build/
+Package.resolved

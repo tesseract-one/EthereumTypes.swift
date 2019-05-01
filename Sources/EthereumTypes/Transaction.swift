@@ -1,6 +1,6 @@
 //
 //  Transaction.swift
-//  EthereumBase
+//  EthereumTypes
 //
 //  Created by Yehor Popovych on 3/14/19.
 //  Copyright © 2019 Tesseract Systems, Inc. All rights reserved.
