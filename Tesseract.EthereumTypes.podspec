@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name             = 'TesseractEthereumTypes'
-  s.version          = '0.1.0'
+  s.name             = 'Tesseract.EthereumTypes'
+  s.version          = '0.1.1'
   s.summary          = 'Tesseract Platform Ethereum types and definitions for Swift'
 
   s.description      = <<-DESC
@@ -32,7 +32,7 @@ Base types, definitions and protocols for Ethereum support in Tesseract Platform
   s.subspec 'PromiseKit' do |ss|
     ss.source_files = 'Sources/PromiseKit/**/*.swift'
 
-    ss.dependency 'TesseractEthereumTypes/Core'
+    ss.dependency 'Tesseract.EthereumTypes/Core'
     ss.dependency 'PromiseKit/CorePromise', '~> 6.8'
   end
 
