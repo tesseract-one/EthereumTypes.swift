@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'TesseractEthereumTypes'
   s.version          = '0.1.0'
-  s.summary          = 'Tesseract Ethereum types and definitions for Swift'
+  s.summary          = 'Tesseract Platform Ethereum types and definitions for Swift'
 
   s.description      = <<-DESC
-Base types, definitions and protocols for Ethereum support in Tesseract for Swift.
+Base types, definitions and protocols for Ethereum support in Tesseract Platform Swift SDK.
                       DESC
 
   s.homepage         = 'https://github.com/tesseract-one/EthereumTypes.swift'
