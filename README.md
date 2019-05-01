@@ -11,7 +11,7 @@
 
 ## Goals
 
-This library is an internal part of the [Tesseract Platform Swift SDK](https://github.com/tesseract_one/). It contains Ethereum types and definitions needed by other parts of Swift SDK.
+This library is an internal part of the [Tesseract Platform Swift SDK](https://github.com/tesseract-one/). It contains Ethereum types and definitions needed by other parts of Swift SDK.
 
 ## Types
 
