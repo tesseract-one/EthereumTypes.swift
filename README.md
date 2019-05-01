@@ -2,6 +2,7 @@
 
 ![🐧 linux: ready](https://img.shields.io/badge/%F0%9F%90%A7%20linux-ready-red.svg)
 [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-lightgrey.svg)](https://raw.githubusercontent.com/tesseract-one/EthereumTypes.swift/master/LICENSE)
+[![Build Status](https://travis-ci.com/tesseract-one/EthereumTypes.swift.svg?branch=master)](https://travis-ci.com/tesseract-one/EthereumTypes.swift)
 [![GitHub release](https://img.shields.io/github/release/tesseract-one/EthereumTypes.swift.svg)](https://github.com/tesseract-one/EthereumTypes.swift/releases)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods version](https://img.shields.io/cocoapods/v/EthereumTypes.swift.svg)](https://cocoapods.org/pods/EthereumTypes.swift)
