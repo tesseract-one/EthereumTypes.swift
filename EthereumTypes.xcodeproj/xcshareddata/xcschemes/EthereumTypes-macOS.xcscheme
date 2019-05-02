@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92B578A4227A0068003E989D"
-               BuildableName = "EthereumTypes_macOS.framework"
+               BuildableName = "EthereumTypes.framework"
                BlueprintName = "EthereumTypes-macOS"
                ReferencedContainer = "container:EthereumTypes.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92B578A4227A0068003E989D"
-            BuildableName = "EthereumTypes_macOS.framework"
+            BuildableName = "EthereumTypes.framework"
             BlueprintName = "EthereumTypes-macOS"
             ReferencedContainer = "container:EthereumTypes.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92B578A4227A0068003E989D"
-            BuildableName = "EthereumTypes_macOS.framework"
+            BuildableName = "EthereumTypes.framework"
             BlueprintName = "EthereumTypes-macOS"
             ReferencedContainer = "container:EthereumTypes.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92B578A4227A0068003E989D"
-            BuildableName = "EthereumTypes_macOS.framework"
+            BuildableName = "EthereumTypes.framework"
             BlueprintName = "EthereumTypes-macOS"
             ReferencedContainer = "container:EthereumTypes.xcodeproj">
          </BuildableReference>
