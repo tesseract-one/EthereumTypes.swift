@@ -333,10 +333,10 @@
 				927C59D1224D0CF000F2AA50 /* TypedData.swift */,
 				927C59CA224D0CF000F2AA50 /* SignProvider.swift */,
 				927C59D0224D0CF000F2AA50 /* Transaction.swift */,
+				92B5790B227AA369003E989D /* Data+Ethereum.swift */,
 				927C59DB224D0E7100F2AA50 /* DataItem.swift */,
 				927C5AC3224E721A00F2AA50 /* APIRegistry.swift */,
 				927C59B2224D0BE800F2AA50 /* Info.plist */,
-				92B5790B227AA369003E989D /* Data+Ethereum.swift */,
 			);
 			path = EthereumTypes;
 			sourceTree = "<group>";

@@ -23,16 +23,21 @@ import CryptoSwift
 
 public extension Data {
     
-    init(eth hex: String) throws {
+    init(quantity hex: String) {
         var fixed = hex
-        if hex.count % 2 != 0 {
-            fixed = hex + "0"
+        if fixed.count >= 2 && fixed.starts(with: "0x") {
+            let index = fixed.index(fixed.startIndex, offsetBy: 2)
+            fixed = String(fixed[index...])
+        }
+        if fixed.count % 2 != 0 {
+            fixed = "0" + fixed
         }
         self.init(hex: fixed)
     }
     
-    var ethHex: String {
+    var quantityHex: String {
         var oldBytes = self.bytes
+        var str = "0x"
         var bytes = Array<UInt8>()
         
         var leading = true
@@ -44,6 +49,17 @@ public extension Data {
             bytes.append(oldBytes[i])
         }
         
-        return "0x" + bytes.toHexString()
+        if bytes.count > 0 {
+            // If there is one leading zero (4 bit) left, this one removes it
+            str += String(bytes[0], radix: 16)
+            
+            for i in 1..<bytes.count {
+                str += String(format: "%02x", bytes[i])
+            }
+        } else {
+            str += "0"
+        }
+        
+        return str
     }
 }
