@@ -26,10 +26,6 @@ This library is an internal part of the [Tesseract Platform Swift SDK](https://g
 * SignProvider
 * APIRegistry
 
-## Submodules
-
-* Ethereum ABI Encoder
-* PromiseKit support
 
 ## Author
 

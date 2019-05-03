@@ -19,9 +19,6 @@
 		927C59DA224D0E0900F2AA50 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D9224D0E0900F2AA50 /* Address.swift */; };
 		927C59DC224D0E7100F2AA50 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59DB224D0E7100F2AA50 /* DataItem.swift */; };
 		927C5AC4224E721A00F2AA50 /* APIRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5AC3224E721A00F2AA50 /* APIRegistry.swift */; };
-		927C5ACF224E9E9E00F2AA50 /* SignProvider+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5ACE224E9E9E00F2AA50 /* SignProvider+Promise.swift */; };
-		92B578382279FD67003E989D /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578342279FD67003E989D /* PromiseKit.framework */; };
-		92B578392279FD67003E989D /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578342279FD67003E989D /* PromiseKit.framework */; };
 		92B5783A2279FD67003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578352279FD67003E989D /* CryptoSwift.framework */; };
 		92B5783B2279FD67003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578352279FD67003E989D /* CryptoSwift.framework */; };
 		92B5783C2279FD67003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578362279FD67003E989D /* Serializable.framework */; };
@@ -30,7 +27,6 @@
 		92B5783F2279FD67003E989D /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578372279FD67003E989D /* BigInt.framework */; };
 		92B578412279FDCD003E989D /* BigInt.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578372279FD67003E989D /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B578422279FDCD003E989D /* CryptoSwift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578352279FD67003E989D /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92B578432279FDCD003E989D /* PromiseKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578342279FD67003E989D /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B578442279FDCD003E989D /* Serializable.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578362279FD67003E989D /* Serializable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B578522279FECC003E989D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D9224D0E0900F2AA50 /* Address.swift */; };
 		92B578532279FECC003E989D /* TypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D1224D0CF000F2AA50 /* TypedData.swift */; };
@@ -42,7 +38,6 @@
 		92B578592279FED2003E989D /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CD224D0CF000F2AA50 /* SolidityWrappedValue.swift */; };
 		92B5785A2279FED2003E989D /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CE224D0CF000F2AA50 /* ABIEncoder.swift */; };
 		92B5785B2279FED2003E989D /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CF224D0CF000F2AA50 /* SolidityType.swift */; };
-		92B5785C2279FED7003E989D /* SignProvider+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5ACE224E9E9E00F2AA50 /* SignProvider+Promise.swift */; };
 		92B5786B2279FF35003E989D /* EthereumTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578622279FF35003E989D /* EthereumTypes.framework */; };
 		92B578792279FFD0003E989D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D9224D0E0900F2AA50 /* Address.swift */; };
 		92B5787A2279FFD0003E989D /* TypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D1224D0CF000F2AA50 /* TypedData.swift */; };
@@ -54,22 +49,17 @@
 		92B578802279FFD8003E989D /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CD224D0CF000F2AA50 /* SolidityWrappedValue.swift */; };
 		92B578812279FFD8003E989D /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CE224D0CF000F2AA50 /* ABIEncoder.swift */; };
 		92B578822279FFD8003E989D /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CF224D0CF000F2AA50 /* SolidityType.swift */; };
-		92B578832279FFDD003E989D /* SignProvider+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5ACE224E9E9E00F2AA50 /* SignProvider+Promise.swift */; };
 		92B578842279FFE1003E989D /* EthereumTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59BC224D0BE800F2AA50 /* EthereumTypesTests.swift */; };
 		92B5788A227A0002003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57886227A0002003E989D /* Serializable.framework */; };
 		92B5788B227A0002003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57886227A0002003E989D /* Serializable.framework */; };
 		92B5788C227A0002003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57887227A0002003E989D /* CryptoSwift.framework */; };
 		92B5788D227A0002003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57887227A0002003E989D /* CryptoSwift.framework */; };
-		92B5788E227A0002003E989D /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57888227A0002003E989D /* PromiseKit.framework */; };
-		92B5788F227A0002003E989D /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57888227A0002003E989D /* PromiseKit.framework */; };
 		92B57890227A0002003E989D /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57889227A0002003E989D /* BigInt.framework */; };
 		92B57891227A0002003E989D /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57889227A0002003E989D /* BigInt.framework */; };
 		92B57893227A001F003E989D /* BigInt.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57889227A0002003E989D /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B57894227A001F003E989D /* CryptoSwift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57887227A0002003E989D /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92B57895227A001F003E989D /* PromiseKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57888227A0002003E989D /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B57896227A001F003E989D /* Serializable.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57886227A0002003E989D /* Serializable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B5789C227A0048003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57898227A0048003E989D /* Serializable.framework */; };
-		92B5789D227A0048003E989D /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57899227A0048003E989D /* PromiseKit.framework */; };
 		92B5789E227A0048003E989D /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5789A227A0048003E989D /* BigInt.framework */; };
 		92B5789F227A0048003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5789B227A0048003E989D /* CryptoSwift.framework */; };
 		92B578AE227A0068003E989D /* EthereumTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578A5227A0068003E989D /* EthereumTypes.framework */; };
@@ -77,8 +67,6 @@
 		92B578C3227A0170003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BE227A0170003E989D /* CryptoSwift.framework */; };
 		92B578C4227A0170003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BF227A0170003E989D /* Serializable.framework */; };
 		92B578C5227A0170003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BF227A0170003E989D /* Serializable.framework */; };
-		92B578C6227A0170003E989D /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578C0227A0170003E989D /* PromiseKit.framework */; };
-		92B578C7227A0170003E989D /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578C0227A0170003E989D /* PromiseKit.framework */; };
 		92B578C8227A0170003E989D /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578C1227A0170003E989D /* BigInt.framework */; };
 		92B578C9227A0170003E989D /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578C1227A0170003E989D /* BigInt.framework */; };
 		92B578CA227A017A003E989D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D9224D0E0900F2AA50 /* Address.swift */; };
@@ -91,11 +79,9 @@
 		92B578D1227A017F003E989D /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CD224D0CF000F2AA50 /* SolidityWrappedValue.swift */; };
 		92B578D2227A017F003E989D /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CE224D0CF000F2AA50 /* ABIEncoder.swift */; };
 		92B578D3227A017F003E989D /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CF224D0CF000F2AA50 /* SolidityType.swift */; };
-		92B578D4227A0182003E989D /* SignProvider+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5ACE224E9E9E00F2AA50 /* SignProvider+Promise.swift */; };
 		92B578D6227A0193003E989D /* EthereumTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59BC224D0BE800F2AA50 /* EthereumTypesTests.swift */; };
 		92B578D8227A01B5003E989D /* BigInt.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578C1227A0170003E989D /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B578D9227A01B5003E989D /* CryptoSwift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BE227A0170003E989D /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92B578DA227A01B5003E989D /* PromiseKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578C0227A0170003E989D /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B578DB227A01B5003E989D /* Serializable.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BF227A0170003E989D /* Serializable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B5790C227AA369003E989D /* Data+Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5790B227AA369003E989D /* Data+Ethereum.swift */; };
 		92B5790D227AA369003E989D /* Data+Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5790B227AA369003E989D /* Data+Ethereum.swift */; };
@@ -136,7 +122,6 @@
 			files = (
 				92B578412279FDCD003E989D /* BigInt.framework in Copy Frameworks */,
 				92B578422279FDCD003E989D /* CryptoSwift.framework in Copy Frameworks */,
-				92B578432279FDCD003E989D /* PromiseKit.framework in Copy Frameworks */,
 				92B578442279FDCD003E989D /* Serializable.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -150,7 +135,6 @@
 			files = (
 				92B57893227A001F003E989D /* BigInt.framework in Copy Frameworks */,
 				92B57894227A001F003E989D /* CryptoSwift.framework in Copy Frameworks */,
-				92B57895227A001F003E989D /* PromiseKit.framework in Copy Frameworks */,
 				92B57896227A001F003E989D /* Serializable.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -164,7 +148,6 @@
 			files = (
 				92B578D8227A01B5003E989D /* BigInt.framework in Copy Frameworks */,
 				92B578D9227A01B5003E989D /* CryptoSwift.framework in Copy Frameworks */,
-				92B578DA227A01B5003E989D /* PromiseKit.framework in Copy Frameworks */,
 				92B578DB227A01B5003E989D /* Serializable.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -189,9 +172,7 @@
 		927C59DB224D0E7100F2AA50 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
 		927C59E1224D141300F2AA50 /* Tesseract.EthereumTypes.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tesseract.EthereumTypes.podspec; sourceTree = "<group>"; };
 		927C5AC3224E721A00F2AA50 /* APIRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRegistry.swift; sourceTree = "<group>"; };
-		927C5ACE224E9E9E00F2AA50 /* SignProvider+Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignProvider+Promise.swift"; sourceTree = "<group>"; };
 		92B578322279FC88003E989D /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		92B578342279FD67003E989D /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
 		92B578352279FD67003E989D /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
 		92B578362279FD67003E989D /* Serializable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Serializable.framework; sourceTree = "<group>"; };
 		92B578372279FD67003E989D /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
@@ -200,17 +181,14 @@
 		92B5786A2279FF35003E989D /* EthereumTypesTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EthereumTypesTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B57886227A0002003E989D /* Serializable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Serializable.framework; sourceTree = "<group>"; };
 		92B57887227A0002003E989D /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
-		92B57888227A0002003E989D /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
 		92B57889227A0002003E989D /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
 		92B57898227A0048003E989D /* Serializable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Serializable.framework; sourceTree = "<group>"; };
-		92B57899227A0048003E989D /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
 		92B5789A227A0048003E989D /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
 		92B5789B227A0048003E989D /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
 		92B578A5227A0068003E989D /* EthereumTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthereumTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B578AD227A0068003E989D /* EthereumTypesTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EthereumTypesTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B578BE227A0170003E989D /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
 		92B578BF227A0170003E989D /* Serializable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Serializable.framework; sourceTree = "<group>"; };
-		92B578C0227A0170003E989D /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
 		92B578C1227A0170003E989D /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
 		92B5790B227AA369003E989D /* Data+Ethereum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ethereum.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,7 +198,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B578382279FD67003E989D /* PromiseKit.framework in Frameworks */,
 				92B5783E2279FD67003E989D /* BigInt.framework in Frameworks */,
 				92B5783A2279FD67003E989D /* CryptoSwift.framework in Frameworks */,
 				92B5783C2279FD67003E989D /* Serializable.framework in Frameworks */,
@@ -235,7 +212,6 @@
 				92B5783D2279FD67003E989D /* Serializable.framework in Frameworks */,
 				927C59B8224D0BE800F2AA50 /* EthereumTypes.framework in Frameworks */,
 				92B5783F2279FD67003E989D /* BigInt.framework in Frameworks */,
-				92B578392279FD67003E989D /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +221,6 @@
 			files = (
 				92B5789C227A0048003E989D /* Serializable.framework in Frameworks */,
 				92B5789E227A0048003E989D /* BigInt.framework in Frameworks */,
-				92B5789D227A0048003E989D /* PromiseKit.framework in Frameworks */,
 				92B5789F227A0048003E989D /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +229,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B5788E227A0002003E989D /* PromiseKit.framework in Frameworks */,
 				92B57890227A0002003E989D /* BigInt.framework in Frameworks */,
 				92B5788A227A0002003E989D /* Serializable.framework in Frameworks */,
 				92B5788C227A0002003E989D /* CryptoSwift.framework in Frameworks */,
@@ -269,7 +243,6 @@
 				92B5786B2279FF35003E989D /* EthereumTypes.framework in Frameworks */,
 				92B5788B227A0002003E989D /* Serializable.framework in Frameworks */,
 				92B57891227A0002003E989D /* BigInt.framework in Frameworks */,
-				92B5788F227A0002003E989D /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +250,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B578C6227A0170003E989D /* PromiseKit.framework in Frameworks */,
 				92B578C8227A0170003E989D /* BigInt.framework in Frameworks */,
 				92B578C2227A0170003E989D /* CryptoSwift.framework in Frameworks */,
 				92B578C4227A0170003E989D /* Serializable.framework in Frameworks */,
@@ -292,7 +264,6 @@
 				92B578C3227A0170003E989D /* CryptoSwift.framework in Frameworks */,
 				92B578C5227A0170003E989D /* Serializable.framework in Frameworks */,
 				92B578C9227A0170003E989D /* BigInt.framework in Frameworks */,
-				92B578C7227A0170003E989D /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				927C59B0224D0BE800F2AA50 /* EthereumTypes */,
-				927C5ACD224E9E6700F2AA50 /* PromiseKit */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -378,20 +348,11 @@
 			path = ABI;
 			sourceTree = "<group>";
 		};
-		927C5ACD224E9E6700F2AA50 /* PromiseKit */ = {
-			isa = PBXGroup;
-			children = (
-				927C5ACE224E9E9E00F2AA50 /* SignProvider+Promise.swift */,
-			);
-			path = PromiseKit;
-			sourceTree = "<group>";
-		};
 		92B578332279FD4A003E989D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				92B578372279FD67003E989D /* BigInt.framework */,
 				92B578352279FD67003E989D /* CryptoSwift.framework */,
-				92B578342279FD67003E989D /* PromiseKit.framework */,
 				92B578362279FD67003E989D /* Serializable.framework */,
 			);
 			path = iOS;
@@ -402,7 +363,6 @@
 			children = (
 				92B57889227A0002003E989D /* BigInt.framework */,
 				92B57887227A0002003E989D /* CryptoSwift.framework */,
-				92B57888227A0002003E989D /* PromiseKit.framework */,
 				92B57886227A0002003E989D /* Serializable.framework */,
 			);
 			path = tvOS;
@@ -413,7 +373,6 @@
 			children = (
 				92B5789A227A0048003E989D /* BigInt.framework */,
 				92B5789B227A0048003E989D /* CryptoSwift.framework */,
-				92B57899227A0048003E989D /* PromiseKit.framework */,
 				92B57898227A0048003E989D /* Serializable.framework */,
 			);
 			path = watchOS;
@@ -424,7 +383,6 @@
 			children = (
 				92B578C1227A0170003E989D /* BigInt.framework */,
 				92B578BE227A0170003E989D /* CryptoSwift.framework */,
-				92B578C0227A0170003E989D /* PromiseKit.framework */,
 				92B578BF227A0170003E989D /* Serializable.framework */,
 			);
 			path = Mac;
@@ -730,7 +688,6 @@
 				927C59D6224D0CF000F2AA50 /* SolidityType.swift in Sources */,
 				927C59D8224D0CF000F2AA50 /* TypedData.swift in Sources */,
 				927C59DA224D0E0900F2AA50 /* Address.swift in Sources */,
-				927C5ACF224E9E9E00F2AA50 /* SignProvider+Promise.swift in Sources */,
 				927C59D7224D0CF000F2AA50 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -757,7 +714,6 @@
 				92B5785A2279FED2003E989D /* ABIEncoder.swift in Sources */,
 				92B578552279FECC003E989D /* Transaction.swift in Sources */,
 				92B578592279FED2003E989D /* SolidityWrappedValue.swift in Sources */,
-				92B5785C2279FED7003E989D /* SignProvider+Promise.swift in Sources */,
 				92B578522279FECC003E989D /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,7 +732,6 @@
 				92B578812279FFD8003E989D /* ABIEncoder.swift in Sources */,
 				92B5787C2279FFD0003E989D /* Transaction.swift in Sources */,
 				92B578802279FFD8003E989D /* SolidityWrappedValue.swift in Sources */,
-				92B578832279FFDD003E989D /* SignProvider+Promise.swift in Sources */,
 				92B578792279FFD0003E989D /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,7 +758,6 @@
 				92B578D2227A017F003E989D /* ABIEncoder.swift in Sources */,
 				92B578CD227A017A003E989D /* Transaction.swift in Sources */,
 				92B578D1227A017F003E989D /* SolidityWrappedValue.swift in Sources */,
-				92B578D4227A0182003E989D /* SignProvider+Promise.swift in Sources */,
 				92B578CA227A017A003E989D /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
