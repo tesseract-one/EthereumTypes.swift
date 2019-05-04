@@ -35,6 +35,8 @@ public protocol SignProvider {
     
     typealias Response<Type> = (Swift.Result<Type, SignProviderError>) -> Void
     
+    var canSign: Bool { get }
+    
     func eth_accounts(networkId: UInt64, response: @escaping Response<Array<Address>>)
     
     func eth_signTx(
