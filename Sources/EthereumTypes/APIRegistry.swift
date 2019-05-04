@@ -28,3 +28,12 @@ public struct APIRegistry {
         self.signProvider = signProvider
     }
 }
+
+// Place for Module API registration
+public struct ModuleAPIRegistry {
+    public let signProvider: SignProvider
+    
+    public init(signProvider: SignProvider) {
+        self.signProvider = signProvider
+    }
+}
