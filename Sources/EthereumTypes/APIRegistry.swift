@@ -20,17 +20,18 @@
 
 import Foundation
 
-// Place for API registration
-public struct APIRegistry {
-    public let signProvider: SignProvider
-    
-    public init(signProvider: SignProvider) {
-        self.signProvider = signProvider
-    }
+// Place for Instance API registration
+public protocol InstanceAPIRegistry {
+    var signProvider: SignProvider { get }
 }
 
 // Place for Module API registration
-public struct ModuleAPIRegistry {
+public protocol ModuleAPIRegistry {
+    var signProvider: SignProvider { get }
+}
+
+// Struct for API registration handling
+public struct APIRegistry: InstanceAPIRegistry, ModuleAPIRegistry {
     public let signProvider: SignProvider
     
     public init(signProvider: SignProvider) {
