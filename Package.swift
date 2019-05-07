@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "EthereumTypes",
     products: [
-        .library(name: "EthereumTypes", targets: ["EthereumTypes"]),
+        .library(name: "Ethereum", targets: ["Ethereum"]),
     ],
     dependencies: [
         .package(url: "https://github.com/attaswift/BigInt.git", from: "4.0.0"),
@@ -13,12 +13,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "EthereumTypes",
+            name: "Ethereum",
             dependencies: ["BigInt", "CryptoSwift", "Serializable"]
         ),
         .testTarget(
-            name: "EthereumTypesTests",
-            dependencies: ["EthereumTypes"]
+            name: "EthereumTests",
+            dependencies: ["Ethereum"]
         )
     ]
 )

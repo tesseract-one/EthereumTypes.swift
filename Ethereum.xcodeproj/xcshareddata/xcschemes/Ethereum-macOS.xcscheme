@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92B578A4227A0068003E989D"
-               BuildableName = "EthereumTypes.framework"
-               BlueprintName = "EthereumTypes-macOS"
-               ReferencedContainer = "container:EthereumTypes.xcodeproj">
+               BuildableName = "Ethereum.framework"
+               BlueprintName = "Ethereum-macOS"
+               ReferencedContainer = "container:Ethereum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92B578AC227A0068003E989D"
-               BuildableName = "EthereumTypesTests-macOS.xctest"
-               BlueprintName = "EthereumTypesTests-macOS"
-               ReferencedContainer = "container:EthereumTypes.xcodeproj">
+               BuildableName = "EthereumTests-macOS.xctest"
+               BlueprintName = "EthereumTests-macOS"
+               ReferencedContainer = "container:Ethereum.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92B578A4227A0068003E989D"
-            BuildableName = "EthereumTypes.framework"
-            BlueprintName = "EthereumTypes-macOS"
-            ReferencedContainer = "container:EthereumTypes.xcodeproj">
+            BuildableName = "Ethereum.framework"
+            BlueprintName = "Ethereum-macOS"
+            ReferencedContainer = "container:Ethereum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92B578A4227A0068003E989D"
-            BuildableName = "EthereumTypes.framework"
-            BlueprintName = "EthereumTypes-macOS"
-            ReferencedContainer = "container:EthereumTypes.xcodeproj">
+            BuildableName = "Ethereum.framework"
+            BlueprintName = "Ethereum-macOS"
+            ReferencedContainer = "container:Ethereum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92B578A4227A0068003E989D"
-            BuildableName = "EthereumTypes.framework"
-            BlueprintName = "EthereumTypes-macOS"
-            ReferencedContainer = "container:EthereumTypes.xcodeproj">
+            BuildableName = "Ethereum.framework"
+            BlueprintName = "Ethereum-macOS"
+            ReferencedContainer = "container:Ethereum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

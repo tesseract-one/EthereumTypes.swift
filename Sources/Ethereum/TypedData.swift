@@ -24,9 +24,9 @@ import BigInt
 
 @_exported import Serializable
 
-public struct TypedData: Codable {
+public struct TypedData: Codable, Hashable, Equatable {
     
-    public struct _Type: Codable {
+    public struct _Type: Codable, Hashable, Equatable {
         public let name: String
         public let type: String
         
@@ -36,7 +36,7 @@ public struct TypedData: Codable {
         }
     }
     
-    public struct Domain: Codable {
+    public struct Domain: Codable, Hashable, Equatable {
         public let name: String
         public let version: String
         public let chainId: Int
@@ -171,7 +171,7 @@ extension TypedData {
             if let int = value.int {
                 return SolidityWrappedValue(value: Int(int), type: .type(.uint(bits: size)))
             }
-            if let str = value.string, let bigInt = BigUInt(value: str) {
+            if let str = value.string, let bigInt = BigUInt(hexString: str) {
                 return SolidityWrappedValue(value: bigInt, type: .type(.uint(bits: size)))
             }
         case let int where int.starts(with: "int"):
@@ -180,7 +180,7 @@ extension TypedData {
             if let int = value.int {
                 return SolidityWrappedValue(value: Int(int), type: .type(.int(bits: size)))
             }
-            if let str = value.string, let bigInt = BigInt(value: str) {
+            if let str = value.string, let bigInt = BigInt(hexString: str) {
                 return SolidityWrappedValue(value: bigInt, type: .type(.int(bits: size)))
             }
         case let bytes where bytes.starts(with: "bytes"):
@@ -197,26 +197,6 @@ extension TypedData {
             throw Error.cantEncodeValue(type, value)
         }
         throw Error.cantEncodeValue(type, value)
-    }
-}
-
-private extension BigInt {
-    init?(value: String) {
-        if value.starts(with: "0x") {
-            self.init(String(value.dropFirst(2)), radix: 16)
-        } else {
-            self.init(value)
-        }
-    }
-}
-
-private extension BigUInt {
-    init?(value: String) {
-        if value.starts(with: "0x") {
-            self.init(String(value.dropFirst(2)), radix: 16)
-        } else {
-            self.init(value)
-        }
     }
 }
 

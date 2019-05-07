@@ -8,15 +8,16 @@
 import Foundation
 import BigInt
 
+
 /// Recursive enumeration of ABI types.
 ///
 /// - type: A regular single type
 /// - array: A homogenous collection of a type with an optional length
 /// - tuple: A collection of types
-indirect enum SolidityType {
+public indirect enum SolidityType {
     
     /// Solidity Base Types
-     enum ValueType {
+    public enum ValueType {
         
         /// unsigned integer type of M bits, 0 < M <= 256, M % 8 == 0. e.g. uint32, uint8, uint256.
         case uint(bits: UInt16)
@@ -45,17 +46,17 @@ indirect enum SolidityType {
         
         // MARK: - Convenient shorthands
         
-         static let uint8: ValueType = .uint(bits: 8)
-         static let uint16: ValueType = .uint(bits: 16)
-         static let uint32: ValueType = .uint(bits: 32)
-         static let uint64: ValueType = .uint(bits: 64)
-         static let uint256: ValueType = .uint(bits: 256)
+        public static let uint8: ValueType = .uint(bits: 8)
+        public static let uint16: ValueType = .uint(bits: 16)
+        public static let uint32: ValueType = .uint(bits: 32)
+        public static let uint64: ValueType = .uint(bits: 64)
+        public static let uint256: ValueType = .uint(bits: 256)
         
-         static let int8: ValueType = .int(bits: 8)
-         static let int16: ValueType = .int(bits: 16)
-         static let int32: ValueType = .int(bits: 32)
-         static let int64: ValueType = .int(bits: 64)
-         static let int256: ValueType = .int(bits: 256)
+        public static let int8: ValueType = .int(bits: 8)
+        public static let int16: ValueType = .int(bits: 16)
+        public static let int32: ValueType = .int(bits: 32)
+        public static let int64: ValueType = .int(bits: 64)
+        public static let int256: ValueType = .int(bits: 256)
     }
     
     case type(ValueType)
@@ -64,50 +65,50 @@ indirect enum SolidityType {
     
     // Convenience members
     
-     static let string: SolidityType = .type(.string)
-     static let bool: SolidityType = .type(.bool)
-     static let address: SolidityType = .type(.address)
+    public static let string: SolidityType = .type(.string)
+    public static let bool: SolidityType = .type(.bool)
+    public static let address: SolidityType = .type(.address)
     
-     static let uint: SolidityType = .type(.uint256)
-     static let uint8: SolidityType = .type(.uint8)
-     static let uint16: SolidityType = .type(.uint16)
-     static let uint32: SolidityType = .type(.uint32)
-     static let uint64: SolidityType = .type(.uint64)
-     static let uint256: SolidityType = .type(.uint256)
+    public static let uint: SolidityType = .type(.uint256)
+    public static let uint8: SolidityType = .type(.uint8)
+    public static let uint16: SolidityType = .type(.uint16)
+    public static let uint32: SolidityType = .type(.uint32)
+    public static let uint64: SolidityType = .type(.uint64)
+    public static let uint256: SolidityType = .type(.uint256)
     
-     static let int: SolidityType = .type(.int(bits: 256))
-     static let int8: SolidityType = .type(.int8)
-     static let int16: SolidityType = .type(.int16)
-     static let int32: SolidityType = .type(.int32)
-     static let int64: SolidityType = .type(.int64)
-     static let int256: SolidityType = .type(.int256)
+    public static let int: SolidityType = .type(.int(bits: 256))
+    public static let int8: SolidityType = .type(.int8)
+    public static let int16: SolidityType = .type(.int16)
+    public static let int32: SolidityType = .type(.int32)
+    public static let int64: SolidityType = .type(.int64)
+    public static let int256: SolidityType = .type(.int256)
     
-     static func fixed(bits: UInt16, exponent: UInt8) -> SolidityType {
+    public static func fixed(bits: UInt16, exponent: UInt8) -> SolidityType {
         return .type(.fixed(bits: bits, length: exponent))
     }
     
-     static func ufixed(bits: UInt16, exponent: UInt8) -> SolidityType {
+    public static func ufixed(bits: UInt16, exponent: UInt8) -> SolidityType {
         return .type(.ufixed(bits: bits, length: exponent))
     }
     
-     static func bytes(length: UInt?) -> SolidityType {
+    public static func bytes(length: UInt?) -> SolidityType {
         return .type(.bytes(length: length))
     }
     
     // Initializers
     
-     init(_ type: ValueType) {
+    public init(_ type: ValueType) {
         self = .type(type)
     }
     
-     init(tuple: SolidityType...) {
+    public init(tuple: SolidityType...) {
         self = .tuple(tuple)
     }
     
     // ABI Helpers
     
     /// Whether or not the type is considered dynamic
-     var isDynamic: Bool {
+    public var isDynamic: Bool {
         switch self {
         case .type(let type):
             return type.isDynamic
@@ -121,7 +122,7 @@ indirect enum SolidityType {
     }
     
     /// String representation for ABI signature
-     var stringValue: String {
+    public var stringValue: String {
         switch self {
         case .type(let type):
             return type.stringValue
@@ -140,7 +141,7 @@ indirect enum SolidityType {
     
     /// Length in bytes of static portion
     /// Typically 32 bytes, but in the case of a fixed size array, it will be the length of the array * 32 bytes
-     var staticPartLength: UInt {
+    public var staticPartLength: UInt {
         switch self {
         case .array(let type, let length):
             if !type.isDynamic, let length = length {
@@ -153,9 +154,9 @@ indirect enum SolidityType {
     }
 }
 
-extension SolidityType.ValueType {
+public extension SolidityType.ValueType {
     
-    var nativeType: ABIEncodable.Type? {
+    var nativeType: ABIConvertible.Type? {
         switch self {
         case .uint(let bits):
             switch bits {
@@ -246,7 +247,7 @@ extension SolidityType.ValueType {
 }
 
 extension SolidityType: Equatable {
-     static func ==(_ a: SolidityType, _ b: SolidityType) -> Bool {
+    public static func ==(_ a: SolidityType, _ b: SolidityType) -> Bool {
         switch(a, b) {
         case (.type(let aType), .type(let bType)):
             return aType == bType
@@ -261,7 +262,7 @@ extension SolidityType: Equatable {
 }
 
 extension SolidityType.ValueType: Equatable {
-    static func ==(_ a: SolidityType.ValueType, _ b: SolidityType.ValueType) -> Bool {
+    public static func ==(_ a: SolidityType.ValueType, _ b: SolidityType.ValueType) -> Bool {
         switch (a, b) {
         case (.uint(let aBits), .uint(let bBits)):
             return aBits == bBits

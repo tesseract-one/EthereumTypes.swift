@@ -21,7 +21,8 @@
 import Foundation
 import CryptoSwift
 
-public struct Address: Codable, RawRepresentable {
+
+public struct Address: Codable, RawRepresentable, Hashable, Equatable {
     public typealias RawValue = Data
     
     public let rawValue: Data
@@ -63,22 +64,12 @@ public struct Address: Codable, RawRepresentable {
             hex = String(hex[hexStart...])
         }
         
-        // Check hex
-        guard hex.rangeOfCharacter(from: Address.hexadecimals.inverted) == nil else {
+        let addressBytes = Data(hex: hex)
+        
+        guard addressBytes.count == 20 else {
             throw Error.addressMalformed
         }
         
-        // Create address bytes
-        var addressBytes = Data()
-        for i in stride(from: 0, to: hex.count, by: 2) {
-            let s = hex.index(hex.startIndex, offsetBy: i)
-            let e = hex.index(hex.startIndex, offsetBy: i + 2)
-            
-            guard let b = UInt8(String(hex[s..<e]), radix: 16) else {
-                throw Error.addressMalformed
-            }
-            addressBytes.append(b)
-        }
         self.rawValue = addressBytes
         
         // EIP 55 checksum
@@ -199,15 +190,27 @@ public struct Address: Codable, RawRepresentable {
         case addressMalformed
         case checksumWrong
     }
-    
-    private static let hexadecimals: CharacterSet = [
-        "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
-        "a", "b", "c", "d", "e", "f", "A", "B", "C", "D", "E", "F"
-    ]
-    
+
     private static let hecadecimalLettersUppercased: CharacterSet = ["A", "B", "C", "D", "E", "F"]
     
     private static let hecadecimalLettersLowercased: CharacterSet = ["a", "b", "c", "d", "e", "f"]
     
     private static let hexadecimalNumbers: CharacterSet = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+}
+
+// MARK: - EthereumValueConvertible
+
+extension Address: ValueConvertible {
+    
+    public init(ethereumValue: Value) throws {
+        guard let str = ethereumValue.string else {
+            throw ValueInitializableError.notInitializable
+        }
+        
+        try self.init(hex: str, eip55: false)
+    }
+    
+    public func ethereumValue() -> Value {
+        return Value(stringLiteral: hex(eip55: false))
+    }
 }

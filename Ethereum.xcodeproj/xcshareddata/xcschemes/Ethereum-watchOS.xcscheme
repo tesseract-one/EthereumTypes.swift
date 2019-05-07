@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92B578492279FE5D003E989D"
-               BuildableName = "EthereumTypes.framework"
-               BlueprintName = "EthereumTypes-watchOS"
-               ReferencedContainer = "container:EthereumTypes.xcodeproj">
+               BuildableName = "Ethereum.framework"
+               BlueprintName = "Ethereum-watchOS"
+               ReferencedContainer = "container:Ethereum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92B578492279FE5D003E989D"
-            BuildableName = "EthereumTypes.framework"
-            BlueprintName = "EthereumTypes-watchOS"
-            ReferencedContainer = "container:EthereumTypes.xcodeproj">
+            BuildableName = "Ethereum.framework"
+            BlueprintName = "Ethereum-watchOS"
+            ReferencedContainer = "container:Ethereum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92B578492279FE5D003E989D"
-            BuildableName = "EthereumTypes.framework"
-            BlueprintName = "EthereumTypes-watchOS"
-            ReferencedContainer = "container:EthereumTypes.xcodeproj">
+            BuildableName = "Ethereum.framework"
+            BlueprintName = "Ethereum-watchOS"
+            ReferencedContainer = "container:Ethereum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

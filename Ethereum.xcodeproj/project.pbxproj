@@ -7,17 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		927C59B8224D0BE800F2AA50 /* EthereumTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927C59AE224D0BE800F2AA50 /* EthereumTypes.framework */; };
-		927C59BD224D0BE800F2AA50 /* EthereumTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59BC224D0BE800F2AA50 /* EthereumTypesTests.swift */; };
+		927C59B8224D0BE800F2AA50 /* Ethereum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927C59AE224D0BE800F2AA50 /* Ethereum.framework */; };
 		927C59D2224D0CF000F2AA50 /* SignProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CA224D0CF000F2AA50 /* SignProvider.swift */; };
-		927C59D3224D0CF000F2AA50 /* ABIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CC224D0CF000F2AA50 /* ABIConvertible.swift */; };
-		927C59D4224D0CF000F2AA50 /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CD224D0CF000F2AA50 /* SolidityWrappedValue.swift */; };
-		927C59D5224D0CF000F2AA50 /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CE224D0CF000F2AA50 /* ABIEncoder.swift */; };
-		927C59D6224D0CF000F2AA50 /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CF224D0CF000F2AA50 /* SolidityType.swift */; };
 		927C59D7224D0CF000F2AA50 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D0224D0CF000F2AA50 /* Transaction.swift */; };
 		927C59D8224D0CF000F2AA50 /* TypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D1224D0CF000F2AA50 /* TypedData.swift */; };
 		927C59DA224D0E0900F2AA50 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D9224D0E0900F2AA50 /* Address.swift */; };
-		927C59DC224D0E7100F2AA50 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59DB224D0E7100F2AA50 /* DataItem.swift */; };
 		927C5AC4224E721A00F2AA50 /* APIRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5AC3224E721A00F2AA50 /* APIRegistry.swift */; };
 		92B5783A2279FD67003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578352279FD67003E989D /* CryptoSwift.framework */; };
 		92B5783B2279FD67003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578352279FD67003E989D /* CryptoSwift.framework */; };
@@ -32,24 +26,13 @@
 		92B578532279FECC003E989D /* TypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D1224D0CF000F2AA50 /* TypedData.swift */; };
 		92B578542279FECC003E989D /* SignProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CA224D0CF000F2AA50 /* SignProvider.swift */; };
 		92B578552279FECC003E989D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D0224D0CF000F2AA50 /* Transaction.swift */; };
-		92B578562279FECC003E989D /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59DB224D0E7100F2AA50 /* DataItem.swift */; };
 		92B578572279FECC003E989D /* APIRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5AC3224E721A00F2AA50 /* APIRegistry.swift */; };
-		92B578582279FED2003E989D /* ABIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CC224D0CF000F2AA50 /* ABIConvertible.swift */; };
-		92B578592279FED2003E989D /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CD224D0CF000F2AA50 /* SolidityWrappedValue.swift */; };
-		92B5785A2279FED2003E989D /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CE224D0CF000F2AA50 /* ABIEncoder.swift */; };
-		92B5785B2279FED2003E989D /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CF224D0CF000F2AA50 /* SolidityType.swift */; };
-		92B5786B2279FF35003E989D /* EthereumTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578622279FF35003E989D /* EthereumTypes.framework */; };
+		92B5786B2279FF35003E989D /* Ethereum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578622279FF35003E989D /* Ethereum.framework */; };
 		92B578792279FFD0003E989D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D9224D0E0900F2AA50 /* Address.swift */; };
 		92B5787A2279FFD0003E989D /* TypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D1224D0CF000F2AA50 /* TypedData.swift */; };
 		92B5787B2279FFD0003E989D /* SignProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CA224D0CF000F2AA50 /* SignProvider.swift */; };
 		92B5787C2279FFD0003E989D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D0224D0CF000F2AA50 /* Transaction.swift */; };
-		92B5787D2279FFD0003E989D /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59DB224D0E7100F2AA50 /* DataItem.swift */; };
 		92B5787E2279FFD0003E989D /* APIRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5AC3224E721A00F2AA50 /* APIRegistry.swift */; };
-		92B5787F2279FFD8003E989D /* ABIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CC224D0CF000F2AA50 /* ABIConvertible.swift */; };
-		92B578802279FFD8003E989D /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CD224D0CF000F2AA50 /* SolidityWrappedValue.swift */; };
-		92B578812279FFD8003E989D /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CE224D0CF000F2AA50 /* ABIEncoder.swift */; };
-		92B578822279FFD8003E989D /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CF224D0CF000F2AA50 /* SolidityType.swift */; };
-		92B578842279FFE1003E989D /* EthereumTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59BC224D0BE800F2AA50 /* EthereumTypesTests.swift */; };
 		92B5788A227A0002003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57886227A0002003E989D /* Serializable.framework */; };
 		92B5788B227A0002003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57886227A0002003E989D /* Serializable.framework */; };
 		92B5788C227A0002003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57887227A0002003E989D /* CryptoSwift.framework */; };
@@ -62,7 +45,7 @@
 		92B5789C227A0048003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B57898227A0048003E989D /* Serializable.framework */; };
 		92B5789E227A0048003E989D /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5789A227A0048003E989D /* BigInt.framework */; };
 		92B5789F227A0048003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5789B227A0048003E989D /* CryptoSwift.framework */; };
-		92B578AE227A0068003E989D /* EthereumTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578A5227A0068003E989D /* EthereumTypes.framework */; };
+		92B578AE227A0068003E989D /* Ethereum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578A5227A0068003E989D /* Ethereum.framework */; };
 		92B578C2227A0170003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BE227A0170003E989D /* CryptoSwift.framework */; };
 		92B578C3227A0170003E989D /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BE227A0170003E989D /* CryptoSwift.framework */; };
 		92B578C4227A0170003E989D /* Serializable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BF227A0170003E989D /* Serializable.framework */; };
@@ -73,13 +56,7 @@
 		92B578CB227A017A003E989D /* TypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D1224D0CF000F2AA50 /* TypedData.swift */; };
 		92B578CC227A017A003E989D /* SignProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CA224D0CF000F2AA50 /* SignProvider.swift */; };
 		92B578CD227A017A003E989D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D0224D0CF000F2AA50 /* Transaction.swift */; };
-		92B578CE227A017A003E989D /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59DB224D0E7100F2AA50 /* DataItem.swift */; };
 		92B578CF227A017A003E989D /* APIRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C5AC3224E721A00F2AA50 /* APIRegistry.swift */; };
-		92B578D0227A017F003E989D /* ABIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CC224D0CF000F2AA50 /* ABIConvertible.swift */; };
-		92B578D1227A017F003E989D /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CD224D0CF000F2AA50 /* SolidityWrappedValue.swift */; };
-		92B578D2227A017F003E989D /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CE224D0CF000F2AA50 /* ABIEncoder.swift */; };
-		92B578D3227A017F003E989D /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CF224D0CF000F2AA50 /* SolidityType.swift */; };
-		92B578D6227A0193003E989D /* EthereumTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59BC224D0BE800F2AA50 /* EthereumTypesTests.swift */; };
 		92B578D8227A01B5003E989D /* BigInt.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578C1227A0170003E989D /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B578D9227A01B5003E989D /* CryptoSwift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BE227A0170003E989D /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B578DB227A01B5003E989D /* Serializable.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92B578BF227A0170003E989D /* Serializable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -87,6 +64,93 @@
 		92B5790D227AA369003E989D /* Data+Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5790B227AA369003E989D /* Data+Ethereum.swift */; };
 		92B5790E227AA369003E989D /* Data+Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5790B227AA369003E989D /* Data+Ethereum.swift */; };
 		92B5790F227AA369003E989D /* Data+Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5790B227AA369003E989D /* Data+Ethereum.swift */; };
+		92C6492C2281C23500F547C3 /* ABIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649232281C23500F547C3 /* ABIConvertible.swift */; };
+		92C6492D2281C23500F547C3 /* ABIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649232281C23500F547C3 /* ABIConvertible.swift */; };
+		92C6492E2281C23500F547C3 /* ABIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649232281C23500F547C3 /* ABIConvertible.swift */; };
+		92C6492F2281C23500F547C3 /* ABIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649232281C23500F547C3 /* ABIConvertible.swift */; };
+		92C649342281C23500F547C3 /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649252281C23500F547C3 /* SolidityWrappedValue.swift */; };
+		92C649352281C23500F547C3 /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649252281C23500F547C3 /* SolidityWrappedValue.swift */; };
+		92C649362281C23500F547C3 /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649252281C23500F547C3 /* SolidityWrappedValue.swift */; };
+		92C649372281C23500F547C3 /* SolidityWrappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649252281C23500F547C3 /* SolidityWrappedValue.swift */; };
+		92C649402281C23500F547C3 /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649282281C23500F547C3 /* ABIEncoder.swift */; };
+		92C649412281C23500F547C3 /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649282281C23500F547C3 /* ABIEncoder.swift */; };
+		92C649422281C23500F547C3 /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649282281C23500F547C3 /* ABIEncoder.swift */; };
+		92C649432281C23500F547C3 /* ABIEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649282281C23500F547C3 /* ABIEncoder.swift */; };
+		92C649442281C23500F547C3 /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649292281C23500F547C3 /* SolidityType.swift */; };
+		92C649452281C23500F547C3 /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649292281C23500F547C3 /* SolidityType.swift */; };
+		92C649462281C23500F547C3 /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649292281C23500F547C3 /* SolidityType.swift */; };
+		92C649472281C23500F547C3 /* SolidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649292281C23500F547C3 /* SolidityType.swift */; };
+		92C649932281CD8C00F547C3 /* SolidityTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649922281CD8C00F547C3 /* SolidityTuple.swift */; };
+		92C649942281CD8C00F547C3 /* SolidityTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649922281CD8C00F547C3 /* SolidityTuple.swift */; };
+		92C649952281CD8C00F547C3 /* SolidityTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649922281CD8C00F547C3 /* SolidityTuple.swift */; };
+		92C649962281CD8C00F547C3 /* SolidityTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649922281CD8C00F547C3 /* SolidityTuple.swift */; };
+		92C6499B2281CE8A00F547C3 /* ValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649982281CE8A00F547C3 /* ValueConvertible.swift */; };
+		92C6499C2281CE8A00F547C3 /* ValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649982281CE8A00F547C3 /* ValueConvertible.swift */; };
+		92C6499D2281CE8A00F547C3 /* ValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649982281CE8A00F547C3 /* ValueConvertible.swift */; };
+		92C6499E2281CE8A00F547C3 /* ValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649982281CE8A00F547C3 /* ValueConvertible.swift */; };
+		92C6499F2281CE8A00F547C3 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649992281CE8A00F547C3 /* Value.swift */; };
+		92C649A02281CE8A00F547C3 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649992281CE8A00F547C3 /* Value.swift */; };
+		92C649A12281CE8A00F547C3 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649992281CE8A00F547C3 /* Value.swift */; };
+		92C649A22281CE8A00F547C3 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649992281CE8A00F547C3 /* Value.swift */; };
+		92C649A32281CE8A00F547C3 /* Types+ValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C6499A2281CE8A00F547C3 /* Types+ValueConvertible.swift */; };
+		92C649A42281CE8A00F547C3 /* Types+ValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C6499A2281CE8A00F547C3 /* Types+ValueConvertible.swift */; };
+		92C649A52281CE8A00F547C3 /* Types+ValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C6499A2281CE8A00F547C3 /* Types+ValueConvertible.swift */; };
+		92C649A62281CE8A00F547C3 /* Types+ValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C6499A2281CE8A00F547C3 /* Types+ValueConvertible.swift */; };
+		92C649A82281D13800F547C3 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649A72281D13800F547C3 /* String+Utils.swift */; };
+		92C649A92281D13800F547C3 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649A72281D13800F547C3 /* String+Utils.swift */; };
+		92C649AA2281D13800F547C3 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649A72281D13800F547C3 /* String+Utils.swift */; };
+		92C649AB2281D13800F547C3 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649A72281D13800F547C3 /* String+Utils.swift */; };
+		92C649AE2281D2A200F547C3 /* Quantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649AC2281D2A200F547C3 /* Quantity.swift */; };
+		92C649AF2281D2A200F547C3 /* Quantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649AC2281D2A200F547C3 /* Quantity.swift */; };
+		92C649B02281D2A200F547C3 /* Quantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649AC2281D2A200F547C3 /* Quantity.swift */; };
+		92C649B12281D2A200F547C3 /* Quantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649AC2281D2A200F547C3 /* Quantity.swift */; };
+		92C649BC2281D87A00F547C3 /* RLPEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B72281D87A00F547C3 /* RLPEncoder.swift */; };
+		92C649BD2281D87A00F547C3 /* RLPEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B72281D87A00F547C3 /* RLPEncoder.swift */; };
+		92C649BE2281D87A00F547C3 /* RLPEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B72281D87A00F547C3 /* RLPEncoder.swift */; };
+		92C649BF2281D87A00F547C3 /* RLPEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B72281D87A00F547C3 /* RLPEncoder.swift */; };
+		92C649C02281D87A00F547C3 /* RLPDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B82281D87A00F547C3 /* RLPDecoder.swift */; };
+		92C649C12281D87A00F547C3 /* RLPDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B82281D87A00F547C3 /* RLPDecoder.swift */; };
+		92C649C22281D87A00F547C3 /* RLPDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B82281D87A00F547C3 /* RLPDecoder.swift */; };
+		92C649C32281D87A00F547C3 /* RLPDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B82281D87A00F547C3 /* RLPDecoder.swift */; };
+		92C649C42281D87A00F547C3 /* RLPItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B92281D87A00F547C3 /* RLPItem.swift */; };
+		92C649C52281D87A00F547C3 /* RLPItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B92281D87A00F547C3 /* RLPItem.swift */; };
+		92C649C62281D87A00F547C3 /* RLPItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B92281D87A00F547C3 /* RLPItem.swift */; };
+		92C649C72281D87A00F547C3 /* RLPItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649B92281D87A00F547C3 /* RLPItem.swift */; };
+		92C649C82281D87A00F547C3 /* RLPItemConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649BA2281D87A00F547C3 /* RLPItemConvertible.swift */; };
+		92C649C92281D87A00F547C3 /* RLPItemConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649BA2281D87A00F547C3 /* RLPItemConvertible.swift */; };
+		92C649CA2281D87A00F547C3 /* RLPItemConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649BA2281D87A00F547C3 /* RLPItemConvertible.swift */; };
+		92C649CB2281D87A00F547C3 /* RLPItemConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649BA2281D87A00F547C3 /* RLPItemConvertible.swift */; };
+		92C649CC2281D87A00F547C3 /* Types+RLPItemConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649BB2281D87A00F547C3 /* Types+RLPItemConvertible.swift */; };
+		92C649CD2281D87A00F547C3 /* Types+RLPItemConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649BB2281D87A00F547C3 /* Types+RLPItemConvertible.swift */; };
+		92C649CE2281D87A00F547C3 /* Types+RLPItemConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649BB2281D87A00F547C3 /* Types+RLPItemConvertible.swift */; };
+		92C649CF2281D87A00F547C3 /* Types+RLPItemConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649BB2281D87A00F547C3 /* Types+RLPItemConvertible.swift */; };
+		92C649D12281DA8600F547C3 /* UnsignedInteger+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D02281DA8600F547C3 /* UnsignedInteger+Data.swift */; };
+		92C649D22281DA8600F547C3 /* UnsignedInteger+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D02281DA8600F547C3 /* UnsignedInteger+Data.swift */; };
+		92C649D32281DA8600F547C3 /* UnsignedInteger+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D02281DA8600F547C3 /* UnsignedInteger+Data.swift */; };
+		92C649D42281DA8600F547C3 /* UnsignedInteger+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D02281DA8600F547C3 /* UnsignedInteger+Data.swift */; };
+		92C649DA2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D62281EA6B00F547C3 /* ABIConvertibleTests.swift */; };
+		92C649DB2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D62281EA6B00F547C3 /* ABIConvertibleTests.swift */; };
+		92C649DC2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D62281EA6B00F547C3 /* ABIConvertibleTests.swift */; };
+		92C649DD2281EA6B00F547C3 /* ABITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D72281EA6B00F547C3 /* ABITests.swift */; };
+		92C649DE2281EA6B00F547C3 /* ABITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D72281EA6B00F547C3 /* ABITests.swift */; };
+		92C649DF2281EA6B00F547C3 /* ABITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D72281EA6B00F547C3 /* ABITests.swift */; };
+		92C649E02281EA6B00F547C3 /* WrappedValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D82281EA6B00F547C3 /* WrappedValueTests.swift */; };
+		92C649E12281EA6B00F547C3 /* WrappedValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D82281EA6B00F547C3 /* WrappedValueTests.swift */; };
+		92C649E22281EA6B00F547C3 /* WrappedValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D82281EA6B00F547C3 /* WrappedValueTests.swift */; };
+		92C649E32281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D92281EA6B00F547C3 /* SolidityTypeTests.swift */; };
+		92C649E42281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D92281EA6B00F547C3 /* SolidityTypeTests.swift */; };
+		92C649E52281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649D92281EA6B00F547C3 /* SolidityTypeTests.swift */; };
+		92C649EA2281EF3C00F547C3 /* SolidityType+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */; };
+		92C649EB2281EF3D00F547C3 /* SolidityType+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */; };
+		92C649EC2281EF3D00F547C3 /* SolidityType+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */; };
+		92C649ED2281EF3E00F547C3 /* SolidityType+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */; };
+		92C649EF2281F5B900F547C3 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649EE2281F5B900F547C3 /* AddressTests.swift */; };
+		92C649F02281F5B900F547C3 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649EE2281F5B900F547C3 /* AddressTests.swift */; };
+		92C649F12281F5B900F547C3 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649EE2281F5B900F547C3 /* AddressTests.swift */; };
+		92C64A59228213C400F547C3 /* EthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C64A58228213C400F547C3 /* EthData.swift */; };
+		92C64A5A228213C400F547C3 /* EthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C64A58228213C400F547C3 /* EthData.swift */; };
+		92C64A5B228213C400F547C3 /* EthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C64A58228213C400F547C3 /* EthData.swift */; };
+		92C64A5C228213C400F547C3 /* EthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C64A58228213C400F547C3 /* EthData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,41 +220,58 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		927C59AE224D0BE800F2AA50 /* EthereumTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthereumTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		927C59AE224D0BE800F2AA50 /* Ethereum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ethereum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		927C59B2224D0BE800F2AA50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		927C59B7224D0BE800F2AA50 /* EthereumTypesTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EthereumTypesTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		927C59BC224D0BE800F2AA50 /* EthereumTypesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumTypesTests.swift; sourceTree = "<group>"; };
+		927C59B7224D0BE800F2AA50 /* EthereumTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EthereumTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927C59BE224D0BE800F2AA50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		927C59CA224D0CF000F2AA50 /* SignProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignProvider.swift; sourceTree = "<group>"; };
-		927C59CC224D0CF000F2AA50 /* ABIConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABIConvertible.swift; sourceTree = "<group>"; };
-		927C59CD224D0CF000F2AA50 /* SolidityWrappedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidityWrappedValue.swift; sourceTree = "<group>"; };
-		927C59CE224D0CF000F2AA50 /* ABIEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABIEncoder.swift; sourceTree = "<group>"; };
-		927C59CF224D0CF000F2AA50 /* SolidityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidityType.swift; sourceTree = "<group>"; };
 		927C59D0224D0CF000F2AA50 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		927C59D1224D0CF000F2AA50 /* TypedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedData.swift; sourceTree = "<group>"; };
 		927C59D9224D0E0900F2AA50 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		927C59DB224D0E7100F2AA50 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
 		927C59E1224D141300F2AA50 /* Tesseract.EthereumTypes.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tesseract.EthereumTypes.podspec; sourceTree = "<group>"; };
 		927C5AC3224E721A00F2AA50 /* APIRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRegistry.swift; sourceTree = "<group>"; };
 		92B578322279FC88003E989D /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		92B578352279FD67003E989D /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
 		92B578362279FD67003E989D /* Serializable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Serializable.framework; sourceTree = "<group>"; };
 		92B578372279FD67003E989D /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
-		92B5784A2279FE5D003E989D /* EthereumTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthereumTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92B578622279FF35003E989D /* EthereumTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthereumTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92B5786A2279FF35003E989D /* EthereumTypesTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EthereumTypesTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B5784A2279FE5D003E989D /* Ethereum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ethereum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B578622279FF35003E989D /* Ethereum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ethereum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B5786A2279FF35003E989D /* EthereumTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EthereumTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B57886227A0002003E989D /* Serializable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Serializable.framework; sourceTree = "<group>"; };
 		92B57887227A0002003E989D /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
 		92B57889227A0002003E989D /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
 		92B57898227A0048003E989D /* Serializable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Serializable.framework; sourceTree = "<group>"; };
 		92B5789A227A0048003E989D /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
 		92B5789B227A0048003E989D /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
-		92B578A5227A0068003E989D /* EthereumTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthereumTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92B578AD227A0068003E989D /* EthereumTypesTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EthereumTypesTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B578A5227A0068003E989D /* Ethereum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ethereum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B578AD227A0068003E989D /* EthereumTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EthereumTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B578BE227A0170003E989D /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
 		92B578BF227A0170003E989D /* Serializable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Serializable.framework; sourceTree = "<group>"; };
 		92B578C1227A0170003E989D /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
 		92B5790B227AA369003E989D /* Data+Ethereum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ethereum.swift"; sourceTree = "<group>"; };
+		92C649232281C23500F547C3 /* ABIConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABIConvertible.swift; sourceTree = "<group>"; };
+		92C649252281C23500F547C3 /* SolidityWrappedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidityWrappedValue.swift; sourceTree = "<group>"; };
+		92C649282281C23500F547C3 /* ABIEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABIEncoder.swift; sourceTree = "<group>"; };
+		92C649292281C23500F547C3 /* SolidityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidityType.swift; sourceTree = "<group>"; };
+		92C649922281CD8C00F547C3 /* SolidityTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidityTuple.swift; sourceTree = "<group>"; };
+		92C649982281CE8A00F547C3 /* ValueConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueConvertible.swift; sourceTree = "<group>"; };
+		92C649992281CE8A00F547C3 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		92C6499A2281CE8A00F547C3 /* Types+ValueConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Types+ValueConvertible.swift"; sourceTree = "<group>"; };
+		92C649A72281D13800F547C3 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		92C649AC2281D2A200F547C3 /* Quantity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quantity.swift; sourceTree = "<group>"; };
+		92C649B72281D87A00F547C3 /* RLPEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLPEncoder.swift; sourceTree = "<group>"; };
+		92C649B82281D87A00F547C3 /* RLPDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLPDecoder.swift; sourceTree = "<group>"; };
+		92C649B92281D87A00F547C3 /* RLPItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLPItem.swift; sourceTree = "<group>"; };
+		92C649BA2281D87A00F547C3 /* RLPItemConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLPItemConvertible.swift; sourceTree = "<group>"; };
+		92C649BB2281D87A00F547C3 /* Types+RLPItemConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Types+RLPItemConvertible.swift"; sourceTree = "<group>"; };
+		92C649D02281DA8600F547C3 /* UnsignedInteger+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UnsignedInteger+Data.swift"; sourceTree = "<group>"; };
+		92C649D62281EA6B00F547C3 /* ABIConvertibleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABIConvertibleTests.swift; sourceTree = "<group>"; };
+		92C649D72281EA6B00F547C3 /* ABITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABITests.swift; sourceTree = "<group>"; };
+		92C649D82281EA6B00F547C3 /* WrappedValueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrappedValueTests.swift; sourceTree = "<group>"; };
+		92C649D92281EA6B00F547C3 /* SolidityTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidityTypeTests.swift; sourceTree = "<group>"; };
+		92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SolidityType+Codable.swift"; sourceTree = "<group>"; };
+		92C649EE2281F5B900F547C3 /* AddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		92C64A58228213C400F547C3 /* EthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,7 +291,7 @@
 			files = (
 				92B5783B2279FD67003E989D /* CryptoSwift.framework in Frameworks */,
 				92B5783D2279FD67003E989D /* Serializable.framework in Frameworks */,
-				927C59B8224D0BE800F2AA50 /* EthereumTypes.framework in Frameworks */,
+				927C59B8224D0BE800F2AA50 /* Ethereum.framework in Frameworks */,
 				92B5783F2279FD67003E989D /* BigInt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,7 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B5788D227A0002003E989D /* CryptoSwift.framework in Frameworks */,
-				92B5786B2279FF35003E989D /* EthereumTypes.framework in Frameworks */,
+				92B5786B2279FF35003E989D /* Ethereum.framework in Frameworks */,
 				92B5788B227A0002003E989D /* Serializable.framework in Frameworks */,
 				92B57891227A0002003E989D /* BigInt.framework in Frameworks */,
 			);
@@ -260,7 +341,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B578AE227A0068003E989D /* EthereumTypes.framework in Frameworks */,
+				92B578AE227A0068003E989D /* Ethereum.framework in Frameworks */,
 				92B578C3227A0170003E989D /* CryptoSwift.framework in Frameworks */,
 				92B578C5227A0170003E989D /* Serializable.framework in Frameworks */,
 				92B578C9227A0170003E989D /* BigInt.framework in Frameworks */,
@@ -285,46 +366,52 @@
 		927C59AF224D0BE800F2AA50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				927C59AE224D0BE800F2AA50 /* EthereumTypes.framework */,
-				927C59B7224D0BE800F2AA50 /* EthereumTypesTests-iOS.xctest */,
-				92B5784A2279FE5D003E989D /* EthereumTypes.framework */,
-				92B578622279FF35003E989D /* EthereumTypes.framework */,
-				92B5786A2279FF35003E989D /* EthereumTypesTests-tvOS.xctest */,
-				92B578A5227A0068003E989D /* EthereumTypes.framework */,
-				92B578AD227A0068003E989D /* EthereumTypesTests-macOS.xctest */,
+				927C59AE224D0BE800F2AA50 /* Ethereum.framework */,
+				927C59B7224D0BE800F2AA50 /* EthereumTests-iOS.xctest */,
+				92B5784A2279FE5D003E989D /* Ethereum.framework */,
+				92B578622279FF35003E989D /* Ethereum.framework */,
+				92B5786A2279FF35003E989D /* EthereumTests-tvOS.xctest */,
+				92B578A5227A0068003E989D /* Ethereum.framework */,
+				92B578AD227A0068003E989D /* EthereumTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		927C59B0224D0BE800F2AA50 /* EthereumTypes */ = {
+		927C59B0224D0BE800F2AA50 /* Ethereum */ = {
 			isa = PBXGroup;
 			children = (
-				927C59CB224D0CF000F2AA50 /* ABI */,
+				92C649B62281D87A00F547C3 /* RLP */,
+				92C649972281CE7200F547C3 /* Value */,
+				92C649222281C23500F547C3 /* ABI */,
 				927C59D9224D0E0900F2AA50 /* Address.swift */,
 				927C59D1224D0CF000F2AA50 /* TypedData.swift */,
+				92C64A58228213C400F547C3 /* EthData.swift */,
 				927C59CA224D0CF000F2AA50 /* SignProvider.swift */,
 				927C59D0224D0CF000F2AA50 /* Transaction.swift */,
+				92C649AC2281D2A200F547C3 /* Quantity.swift */,
 				92B5790B227AA369003E989D /* Data+Ethereum.swift */,
-				927C59DB224D0E7100F2AA50 /* DataItem.swift */,
+				92C649D02281DA8600F547C3 /* UnsignedInteger+Data.swift */,
 				927C5AC3224E721A00F2AA50 /* APIRegistry.swift */,
+				92C649A72281D13800F547C3 /* String+Utils.swift */,
 				927C59B2224D0BE800F2AA50 /* Info.plist */,
 			);
-			path = EthereumTypes;
+			path = Ethereum;
 			sourceTree = "<group>";
 		};
-		927C59BB224D0BE800F2AA50 /* EthereumTypesTests */ = {
+		927C59BB224D0BE800F2AA50 /* EthereumTests */ = {
 			isa = PBXGroup;
 			children = (
-				927C59BC224D0BE800F2AA50 /* EthereumTypesTests.swift */,
+				92C649D52281EA4000F547C3 /* ABITests */,
+				92C649EE2281F5B900F547C3 /* AddressTests.swift */,
 				927C59BE224D0BE800F2AA50 /* Info.plist */,
 			);
-			path = EthereumTypesTests;
+			path = EthereumTests;
 			sourceTree = "<group>";
 		};
 		927C59C8224D0C3B00F2AA50 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				927C59B0224D0BE800F2AA50 /* EthereumTypes */,
+				927C59B0224D0BE800F2AA50 /* Ethereum */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -332,20 +419,9 @@
 		927C59C9224D0C5600F2AA50 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				927C59BB224D0BE800F2AA50 /* EthereumTypesTests */,
+				927C59BB224D0BE800F2AA50 /* EthereumTests */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		927C59CB224D0CF000F2AA50 /* ABI */ = {
-			isa = PBXGroup;
-			children = (
-				927C59CC224D0CF000F2AA50 /* ABIConvertible.swift */,
-				927C59CD224D0CF000F2AA50 /* SolidityWrappedValue.swift */,
-				927C59CE224D0CF000F2AA50 /* ABIEncoder.swift */,
-				927C59CF224D0CF000F2AA50 /* SolidityType.swift */,
-			);
-			path = ABI;
 			sourceTree = "<group>";
 		};
 		92B578332279FD4A003E989D /* iOS */ = {
@@ -386,6 +462,52 @@
 				92B578BF227A0170003E989D /* Serializable.framework */,
 			);
 			path = Mac;
+			sourceTree = "<group>";
+		};
+		92C649222281C23500F547C3 /* ABI */ = {
+			isa = PBXGroup;
+			children = (
+				92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */,
+				92C649922281CD8C00F547C3 /* SolidityTuple.swift */,
+				92C649232281C23500F547C3 /* ABIConvertible.swift */,
+				92C649252281C23500F547C3 /* SolidityWrappedValue.swift */,
+				92C649282281C23500F547C3 /* ABIEncoder.swift */,
+				92C649292281C23500F547C3 /* SolidityType.swift */,
+			);
+			path = ABI;
+			sourceTree = "<group>";
+		};
+		92C649972281CE7200F547C3 /* Value */ = {
+			isa = PBXGroup;
+			children = (
+				92C649992281CE8A00F547C3 /* Value.swift */,
+				92C649982281CE8A00F547C3 /* ValueConvertible.swift */,
+				92C6499A2281CE8A00F547C3 /* Types+ValueConvertible.swift */,
+			);
+			path = Value;
+			sourceTree = "<group>";
+		};
+		92C649B62281D87A00F547C3 /* RLP */ = {
+			isa = PBXGroup;
+			children = (
+				92C649B72281D87A00F547C3 /* RLPEncoder.swift */,
+				92C649B82281D87A00F547C3 /* RLPDecoder.swift */,
+				92C649B92281D87A00F547C3 /* RLPItem.swift */,
+				92C649BA2281D87A00F547C3 /* RLPItemConvertible.swift */,
+				92C649BB2281D87A00F547C3 /* Types+RLPItemConvertible.swift */,
+			);
+			path = RLP;
+			sourceTree = "<group>";
+		};
+		92C649D52281EA4000F547C3 /* ABITests */ = {
+			isa = PBXGroup;
+			children = (
+				92C649D62281EA6B00F547C3 /* ABIConvertibleTests.swift */,
+				92C649D72281EA6B00F547C3 /* ABITests.swift */,
+				92C649D92281EA6B00F547C3 /* SolidityTypeTests.swift */,
+				92C649D82281EA6B00F547C3 /* WrappedValueTests.swift */,
+			);
+			path = ABITests;
 			sourceTree = "<group>";
 		};
 		F718DA00E8DE85304C9ACA48 /* Frameworks */ = {
@@ -434,9 +556,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		927C59AD224D0BE800F2AA50 /* EthereumTypes-iOS */ = {
+		927C59AD224D0BE800F2AA50 /* Ethereum-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 927C59C2224D0BE800F2AA50 /* Build configuration list for PBXNativeTarget "EthereumTypes-iOS" */;
+			buildConfigurationList = 927C59C2224D0BE800F2AA50 /* Build configuration list for PBXNativeTarget "Ethereum-iOS" */;
 			buildPhases = (
 				927C59A9224D0BE800F2AA50 /* Headers */,
 				927C59AA224D0BE800F2AA50 /* Sources */,
@@ -447,14 +569,14 @@
 			);
 			dependencies = (
 			);
-			name = "EthereumTypes-iOS";
+			name = "Ethereum-iOS";
 			productName = Ethereum;
-			productReference = 927C59AE224D0BE800F2AA50 /* EthereumTypes.framework */;
+			productReference = 927C59AE224D0BE800F2AA50 /* Ethereum.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		927C59B6224D0BE800F2AA50 /* EthereumTypesTests-iOS */ = {
+		927C59B6224D0BE800F2AA50 /* EthereumTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 927C59C5224D0BE800F2AA50 /* Build configuration list for PBXNativeTarget "EthereumTypesTests-iOS" */;
+			buildConfigurationList = 927C59C5224D0BE800F2AA50 /* Build configuration list for PBXNativeTarget "EthereumTests-iOS" */;
 			buildPhases = (
 				927C59B3224D0BE800F2AA50 /* Sources */,
 				927C59B4224D0BE800F2AA50 /* Frameworks */,
@@ -466,14 +588,14 @@
 			dependencies = (
 				927C59BA224D0BE800F2AA50 /* PBXTargetDependency */,
 			);
-			name = "EthereumTypesTests-iOS";
+			name = "EthereumTests-iOS";
 			productName = EthereumTests;
-			productReference = 927C59B7224D0BE800F2AA50 /* EthereumTypesTests-iOS.xctest */;
+			productReference = 927C59B7224D0BE800F2AA50 /* EthereumTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		92B578492279FE5D003E989D /* EthereumTypes-watchOS */ = {
+		92B578492279FE5D003E989D /* Ethereum-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92B578512279FE5D003E989D /* Build configuration list for PBXNativeTarget "EthereumTypes-watchOS" */;
+			buildConfigurationList = 92B578512279FE5D003E989D /* Build configuration list for PBXNativeTarget "Ethereum-watchOS" */;
 			buildPhases = (
 				92B578452279FE5D003E989D /* Headers */,
 				92B578462279FE5D003E989D /* Sources */,
@@ -484,14 +606,14 @@
 			);
 			dependencies = (
 			);
-			name = "EthereumTypes-watchOS";
+			name = "Ethereum-watchOS";
 			productName = "EthereumTypes-watchOS";
-			productReference = 92B5784A2279FE5D003E989D /* EthereumTypes.framework */;
+			productReference = 92B5784A2279FE5D003E989D /* Ethereum.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		92B578612279FF35003E989D /* EthereumTypes-tvOS */ = {
+		92B578612279FF35003E989D /* Ethereum-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92B578732279FF35003E989D /* Build configuration list for PBXNativeTarget "EthereumTypes-tvOS" */;
+			buildConfigurationList = 92B578732279FF35003E989D /* Build configuration list for PBXNativeTarget "Ethereum-tvOS" */;
 			buildPhases = (
 				92B5785D2279FF35003E989D /* Headers */,
 				92B5785E2279FF35003E989D /* Sources */,
@@ -502,14 +624,14 @@
 			);
 			dependencies = (
 			);
-			name = "EthereumTypes-tvOS";
+			name = "Ethereum-tvOS";
 			productName = "EthereumTypes-tvOS";
-			productReference = 92B578622279FF35003E989D /* EthereumTypes.framework */;
+			productReference = 92B578622279FF35003E989D /* Ethereum.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		92B578692279FF35003E989D /* EthereumTypesTests-tvOS */ = {
+		92B578692279FF35003E989D /* EthereumTests-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92B578762279FF35003E989D /* Build configuration list for PBXNativeTarget "EthereumTypesTests-tvOS" */;
+			buildConfigurationList = 92B578762279FF35003E989D /* Build configuration list for PBXNativeTarget "EthereumTests-tvOS" */;
 			buildPhases = (
 				92B578662279FF35003E989D /* Sources */,
 				92B578672279FF35003E989D /* Frameworks */,
@@ -521,14 +643,14 @@
 			dependencies = (
 				92B5786D2279FF35003E989D /* PBXTargetDependency */,
 			);
-			name = "EthereumTypesTests-tvOS";
+			name = "EthereumTests-tvOS";
 			productName = "EthereumTypes-tvOSTests";
-			productReference = 92B5786A2279FF35003E989D /* EthereumTypesTests-tvOS.xctest */;
+			productReference = 92B5786A2279FF35003E989D /* EthereumTests-tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		92B578A4227A0068003E989D /* EthereumTypes-macOS */ = {
+		92B578A4227A0068003E989D /* Ethereum-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92B578B6227A0068003E989D /* Build configuration list for PBXNativeTarget "EthereumTypes-macOS" */;
+			buildConfigurationList = 92B578B6227A0068003E989D /* Build configuration list for PBXNativeTarget "Ethereum-macOS" */;
 			buildPhases = (
 				92B578A0227A0068003E989D /* Headers */,
 				92B578A1227A0068003E989D /* Sources */,
@@ -539,14 +661,14 @@
 			);
 			dependencies = (
 			);
-			name = "EthereumTypes-macOS";
+			name = "Ethereum-macOS";
 			productName = "EthereumTypes-macOS";
-			productReference = 92B578A5227A0068003E989D /* EthereumTypes.framework */;
+			productReference = 92B578A5227A0068003E989D /* Ethereum.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		92B578AC227A0068003E989D /* EthereumTypesTests-macOS */ = {
+		92B578AC227A0068003E989D /* EthereumTests-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92B578B9227A0068003E989D /* Build configuration list for PBXNativeTarget "EthereumTypesTests-macOS" */;
+			buildConfigurationList = 92B578B9227A0068003E989D /* Build configuration list for PBXNativeTarget "EthereumTests-macOS" */;
 			buildPhases = (
 				92B578A9227A0068003E989D /* Sources */,
 				92B578AA227A0068003E989D /* Frameworks */,
@@ -558,9 +680,9 @@
 			dependencies = (
 				92B578B0227A0068003E989D /* PBXTargetDependency */,
 			);
-			name = "EthereumTypesTests-macOS";
+			name = "EthereumTests-macOS";
 			productName = "EthereumTypes-macOSTests";
-			productReference = 92B578AD227A0068003E989D /* EthereumTypesTests-macOS.xctest */;
+			productReference = 92B578AD227A0068003E989D /* EthereumTests-macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -597,7 +719,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 927C59A8224D0BE800F2AA50 /* Build configuration list for PBXProject "EthereumTypes" */;
+			buildConfigurationList = 927C59A8224D0BE800F2AA50 /* Build configuration list for PBXProject "Ethereum" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -610,13 +732,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92B578A4227A0068003E989D /* EthereumTypes-macOS */,
-				92B578AC227A0068003E989D /* EthereumTypesTests-macOS */,
-				927C59AD224D0BE800F2AA50 /* EthereumTypes-iOS */,
-				927C59B6224D0BE800F2AA50 /* EthereumTypesTests-iOS */,
-				92B578612279FF35003E989D /* EthereumTypes-tvOS */,
-				92B578692279FF35003E989D /* EthereumTypesTests-tvOS */,
-				92B578492279FE5D003E989D /* EthereumTypes-watchOS */,
+				92B578A4227A0068003E989D /* Ethereum-macOS */,
+				92B578AC227A0068003E989D /* EthereumTests-macOS */,
+				927C59AD224D0BE800F2AA50 /* Ethereum-iOS */,
+				927C59B6224D0BE800F2AA50 /* EthereumTests-iOS */,
+				92B578612279FF35003E989D /* Ethereum-tvOS */,
+				92B578692279FF35003E989D /* EthereumTests-tvOS */,
+				92B578492279FE5D003E989D /* Ethereum-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -678,15 +800,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				927C59D3224D0CF000F2AA50 /* ABIConvertible.swift in Sources */,
+				92C649A92281D13800F547C3 /* String+Utils.swift in Sources */,
+				92C6499C2281CE8A00F547C3 /* ValueConvertible.swift in Sources */,
+				92C649352281C23500F547C3 /* SolidityWrappedValue.swift in Sources */,
+				92C649BD2281D87A00F547C3 /* RLPEncoder.swift in Sources */,
+				92C649C12281D87A00F547C3 /* RLPDecoder.swift in Sources */,
+				92C649A02281CE8A00F547C3 /* Value.swift in Sources */,
+				92C649D22281DA8600F547C3 /* UnsignedInteger+Data.swift in Sources */,
+				92C64A5A228213C400F547C3 /* EthData.swift in Sources */,
+				92C649942281CD8C00F547C3 /* SolidityTuple.swift in Sources */,
+				92C649452281C23500F547C3 /* SolidityType.swift in Sources */,
+				92C6492D2281C23500F547C3 /* ABIConvertible.swift in Sources */,
+				92C649C92281D87A00F547C3 /* RLPItemConvertible.swift in Sources */,
+				92C649A42281CE8A00F547C3 /* Types+ValueConvertible.swift in Sources */,
+				92C649EC2281EF3D00F547C3 /* SolidityType+Codable.swift in Sources */,
+				92C649412281C23500F547C3 /* ABIEncoder.swift in Sources */,
+				92C649CD2281D87A00F547C3 /* Types+RLPItemConvertible.swift in Sources */,
 				927C59D2224D0CF000F2AA50 /* SignProvider.swift in Sources */,
 				92B5790D227AA369003E989D /* Data+Ethereum.swift in Sources */,
-				927C59D4224D0CF000F2AA50 /* SolidityWrappedValue.swift in Sources */,
-				927C59D5224D0CF000F2AA50 /* ABIEncoder.swift in Sources */,
-				927C59DC224D0E7100F2AA50 /* DataItem.swift in Sources */,
+				92C649AF2281D2A200F547C3 /* Quantity.swift in Sources */,
 				927C5AC4224E721A00F2AA50 /* APIRegistry.swift in Sources */,
-				927C59D6224D0CF000F2AA50 /* SolidityType.swift in Sources */,
 				927C59D8224D0CF000F2AA50 /* TypedData.swift in Sources */,
+				92C649C52281D87A00F547C3 /* RLPItem.swift in Sources */,
 				927C59DA224D0E0900F2AA50 /* Address.swift in Sources */,
 				927C59D7224D0CF000F2AA50 /* Transaction.swift in Sources */,
 			);
@@ -696,7 +831,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				927C59BD224D0BE800F2AA50 /* EthereumTypesTests.swift in Sources */,
+				92C649DE2281EA6B00F547C3 /* ABITests.swift in Sources */,
+				92C649E42281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
+				92C649E12281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
+				92C649F02281F5B900F547C3 /* AddressTests.swift in Sources */,
+				92C649DB2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,16 +843,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B578562279FECC003E989D /* DataItem.swift in Sources */,
+				92C649AB2281D13800F547C3 /* String+Utils.swift in Sources */,
+				92C6499E2281CE8A00F547C3 /* ValueConvertible.swift in Sources */,
+				92C649372281C23500F547C3 /* SolidityWrappedValue.swift in Sources */,
+				92C649BF2281D87A00F547C3 /* RLPEncoder.swift in Sources */,
+				92C649C32281D87A00F547C3 /* RLPDecoder.swift in Sources */,
+				92C649A22281CE8A00F547C3 /* Value.swift in Sources */,
+				92C649D42281DA8600F547C3 /* UnsignedInteger+Data.swift in Sources */,
+				92C64A5C228213C400F547C3 /* EthData.swift in Sources */,
+				92C649962281CD8C00F547C3 /* SolidityTuple.swift in Sources */,
+				92C649472281C23500F547C3 /* SolidityType.swift in Sources */,
+				92C6492F2281C23500F547C3 /* ABIConvertible.swift in Sources */,
+				92C649CB2281D87A00F547C3 /* RLPItemConvertible.swift in Sources */,
+				92C649A62281CE8A00F547C3 /* Types+ValueConvertible.swift in Sources */,
+				92C649EA2281EF3C00F547C3 /* SolidityType+Codable.swift in Sources */,
+				92C649432281C23500F547C3 /* ABIEncoder.swift in Sources */,
+				92C649CF2281D87A00F547C3 /* Types+RLPItemConvertible.swift in Sources */,
 				92B578572279FECC003E989D /* APIRegistry.swift in Sources */,
+				92C649B12281D2A200F547C3 /* Quantity.swift in Sources */,
 				92B5790F227AA369003E989D /* Data+Ethereum.swift in Sources */,
 				92B578532279FECC003E989D /* TypedData.swift in Sources */,
-				92B578582279FED2003E989D /* ABIConvertible.swift in Sources */,
-				92B5785B2279FED2003E989D /* SolidityType.swift in Sources */,
 				92B578542279FECC003E989D /* SignProvider.swift in Sources */,
-				92B5785A2279FED2003E989D /* ABIEncoder.swift in Sources */,
+				92C649C72281D87A00F547C3 /* RLPItem.swift in Sources */,
 				92B578552279FECC003E989D /* Transaction.swift in Sources */,
-				92B578592279FED2003E989D /* SolidityWrappedValue.swift in Sources */,
 				92B578522279FECC003E989D /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,16 +874,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B5787D2279FFD0003E989D /* DataItem.swift in Sources */,
+				92C649AA2281D13800F547C3 /* String+Utils.swift in Sources */,
+				92C6499D2281CE8A00F547C3 /* ValueConvertible.swift in Sources */,
+				92C649362281C23500F547C3 /* SolidityWrappedValue.swift in Sources */,
+				92C649BE2281D87A00F547C3 /* RLPEncoder.swift in Sources */,
+				92C649C22281D87A00F547C3 /* RLPDecoder.swift in Sources */,
+				92C649A12281CE8A00F547C3 /* Value.swift in Sources */,
+				92C649D32281DA8600F547C3 /* UnsignedInteger+Data.swift in Sources */,
+				92C64A5B228213C400F547C3 /* EthData.swift in Sources */,
+				92C649952281CD8C00F547C3 /* SolidityTuple.swift in Sources */,
+				92C649462281C23500F547C3 /* SolidityType.swift in Sources */,
+				92C6492E2281C23500F547C3 /* ABIConvertible.swift in Sources */,
+				92C649CA2281D87A00F547C3 /* RLPItemConvertible.swift in Sources */,
+				92C649A52281CE8A00F547C3 /* Types+ValueConvertible.swift in Sources */,
+				92C649EB2281EF3D00F547C3 /* SolidityType+Codable.swift in Sources */,
+				92C649422281C23500F547C3 /* ABIEncoder.swift in Sources */,
+				92C649CE2281D87A00F547C3 /* Types+RLPItemConvertible.swift in Sources */,
 				92B5787E2279FFD0003E989D /* APIRegistry.swift in Sources */,
+				92C649B02281D2A200F547C3 /* Quantity.swift in Sources */,
 				92B5790E227AA369003E989D /* Data+Ethereum.swift in Sources */,
 				92B5787A2279FFD0003E989D /* TypedData.swift in Sources */,
-				92B5787F2279FFD8003E989D /* ABIConvertible.swift in Sources */,
-				92B578822279FFD8003E989D /* SolidityType.swift in Sources */,
 				92B5787B2279FFD0003E989D /* SignProvider.swift in Sources */,
-				92B578812279FFD8003E989D /* ABIEncoder.swift in Sources */,
+				92C649C62281D87A00F547C3 /* RLPItem.swift in Sources */,
 				92B5787C2279FFD0003E989D /* Transaction.swift in Sources */,
-				92B578802279FFD8003E989D /* SolidityWrappedValue.swift in Sources */,
 				92B578792279FFD0003E989D /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,7 +905,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B578842279FFE1003E989D /* EthereumTypesTests.swift in Sources */,
+				92C649DF2281EA6B00F547C3 /* ABITests.swift in Sources */,
+				92C649E52281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
+				92C649E22281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
+				92C649F12281F5B900F547C3 /* AddressTests.swift in Sources */,
+				92C649DC2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,16 +917,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B578CE227A017A003E989D /* DataItem.swift in Sources */,
+				92C649A82281D13800F547C3 /* String+Utils.swift in Sources */,
+				92C6499B2281CE8A00F547C3 /* ValueConvertible.swift in Sources */,
+				92C649342281C23500F547C3 /* SolidityWrappedValue.swift in Sources */,
+				92C649BC2281D87A00F547C3 /* RLPEncoder.swift in Sources */,
+				92C649C02281D87A00F547C3 /* RLPDecoder.swift in Sources */,
+				92C6499F2281CE8A00F547C3 /* Value.swift in Sources */,
+				92C649D12281DA8600F547C3 /* UnsignedInteger+Data.swift in Sources */,
+				92C64A59228213C400F547C3 /* EthData.swift in Sources */,
+				92C649932281CD8C00F547C3 /* SolidityTuple.swift in Sources */,
+				92C649442281C23500F547C3 /* SolidityType.swift in Sources */,
+				92C6492C2281C23500F547C3 /* ABIConvertible.swift in Sources */,
+				92C649C82281D87A00F547C3 /* RLPItemConvertible.swift in Sources */,
+				92C649A32281CE8A00F547C3 /* Types+ValueConvertible.swift in Sources */,
+				92C649ED2281EF3E00F547C3 /* SolidityType+Codable.swift in Sources */,
+				92C649402281C23500F547C3 /* ABIEncoder.swift in Sources */,
+				92C649CC2281D87A00F547C3 /* Types+RLPItemConvertible.swift in Sources */,
 				92B578CF227A017A003E989D /* APIRegistry.swift in Sources */,
+				92C649AE2281D2A200F547C3 /* Quantity.swift in Sources */,
 				92B5790C227AA369003E989D /* Data+Ethereum.swift in Sources */,
 				92B578CB227A017A003E989D /* TypedData.swift in Sources */,
-				92B578D0227A017F003E989D /* ABIConvertible.swift in Sources */,
-				92B578D3227A017F003E989D /* SolidityType.swift in Sources */,
 				92B578CC227A017A003E989D /* SignProvider.swift in Sources */,
-				92B578D2227A017F003E989D /* ABIEncoder.swift in Sources */,
+				92C649C42281D87A00F547C3 /* RLPItem.swift in Sources */,
 				92B578CD227A017A003E989D /* Transaction.swift in Sources */,
-				92B578D1227A017F003E989D /* SolidityWrappedValue.swift in Sources */,
 				92B578CA227A017A003E989D /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -766,7 +948,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B578D6227A0193003E989D /* EthereumTypesTests.swift in Sources */,
+				92C649DD2281EA6B00F547C3 /* ABITests.swift in Sources */,
+				92C649E32281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
+				92C649E02281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
+				92C649EF2281F5B900F547C3 /* AddressTests.swift in Sources */,
+				92C649DA2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,17 +961,17 @@
 /* Begin PBXTargetDependency section */
 		927C59BA224D0BE800F2AA50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 927C59AD224D0BE800F2AA50 /* EthereumTypes-iOS */;
+			target = 927C59AD224D0BE800F2AA50 /* Ethereum-iOS */;
 			targetProxy = 927C59B9224D0BE800F2AA50 /* PBXContainerItemProxy */;
 		};
 		92B5786D2279FF35003E989D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92B578612279FF35003E989D /* EthereumTypes-tvOS */;
+			target = 92B578612279FF35003E989D /* Ethereum-tvOS */;
 			targetProxy = 92B5786C2279FF35003E989D /* PBXContainerItemProxy */;
 		};
 		92B578B0227A0068003E989D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92B578A4227A0068003E989D /* EthereumTypes-macOS */;
+			target = 92B578A4227A0068003E989D /* Ethereum-macOS */;
 			targetProxy = 92B578AF227A0068003E989D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -937,14 +1123,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/EthereumTypes/Info.plist;
+				INFOPLIST_FILE = Sources/Ethereum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.EthereumTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.Ethereum;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -967,14 +1153,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/EthereumTypes/Info.plist;
+				INFOPLIST_FILE = Sources/Ethereum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.EthereumTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.Ethereum;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -989,13 +1175,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/EthereumTypesTests/Info.plist;
+				INFOPLIST_FILE = Tests/EthereumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTypesTests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1009,13 +1195,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/EthereumTypesTests/Info.plist;
+				INFOPLIST_FILE = Tests/EthereumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTypesTests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1035,14 +1221,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				INFOPLIST_FILE = Sources/EthereumTypes/Info.plist;
+				INFOPLIST_FILE = Sources/Ethereum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.EthereumTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.Ethereum;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1064,14 +1250,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				INFOPLIST_FILE = Sources/EthereumTypes/Info.plist;
+				INFOPLIST_FILE = Sources/Ethereum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.EthereumTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.Ethereum;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1092,14 +1278,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = Sources/EthereumTypes/Info.plist;
+				INFOPLIST_FILE = Sources/Ethereum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.EthereumTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.Ethereum;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1120,14 +1306,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = Sources/EthereumTypes/Info.plist;
+				INFOPLIST_FILE = Sources/Ethereum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.EthereumTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.Ethereum;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1144,13 +1330,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = Tests/EthereumTypesTests/Info.plist;
+				INFOPLIST_FILE = Tests/EthereumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTypesTests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1166,13 +1352,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = Tests/EthereumTypesTests/Info.plist;
+				INFOPLIST_FILE = Tests/EthereumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTypesTests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1194,14 +1380,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Sources/EthereumTypes/Info.plist;
+				INFOPLIST_FILE = Sources/Ethereum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.EthereumTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.Ethereum;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1223,14 +1409,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Sources/EthereumTypes/Info.plist;
+				INFOPLIST_FILE = Sources/Ethereum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.EthereumTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = one.tesseract.Ethereum;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1248,13 +1434,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = Tests/EthereumTypesTests/Info.plist;
+				INFOPLIST_FILE = Tests/EthereumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTypesTests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1271,13 +1457,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = Tests/EthereumTypesTests/Info.plist;
+				INFOPLIST_FILE = Tests/EthereumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTypesTests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "one.tesseract.EthereumTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1286,7 +1472,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		927C59A8224D0BE800F2AA50 /* Build configuration list for PBXProject "EthereumTypes" */ = {
+		927C59A8224D0BE800F2AA50 /* Build configuration list for PBXProject "Ethereum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				927C59C0224D0BE800F2AA50 /* Debug */,
@@ -1295,7 +1481,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		927C59C2224D0BE800F2AA50 /* Build configuration list for PBXNativeTarget "EthereumTypes-iOS" */ = {
+		927C59C2224D0BE800F2AA50 /* Build configuration list for PBXNativeTarget "Ethereum-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				927C59C3224D0BE800F2AA50 /* Debug */,
@@ -1304,7 +1490,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		927C59C5224D0BE800F2AA50 /* Build configuration list for PBXNativeTarget "EthereumTypesTests-iOS" */ = {
+		927C59C5224D0BE800F2AA50 /* Build configuration list for PBXNativeTarget "EthereumTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				927C59C6224D0BE800F2AA50 /* Debug */,
@@ -1313,7 +1499,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92B578512279FE5D003E989D /* Build configuration list for PBXNativeTarget "EthereumTypes-watchOS" */ = {
+		92B578512279FE5D003E989D /* Build configuration list for PBXNativeTarget "Ethereum-watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92B5784F2279FE5D003E989D /* Debug */,
@@ -1322,7 +1508,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92B578732279FF35003E989D /* Build configuration list for PBXNativeTarget "EthereumTypes-tvOS" */ = {
+		92B578732279FF35003E989D /* Build configuration list for PBXNativeTarget "Ethereum-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92B578742279FF35003E989D /* Debug */,
@@ -1331,7 +1517,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92B578762279FF35003E989D /* Build configuration list for PBXNativeTarget "EthereumTypesTests-tvOS" */ = {
+		92B578762279FF35003E989D /* Build configuration list for PBXNativeTarget "EthereumTests-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92B578772279FF35003E989D /* Debug */,
@@ -1340,7 +1526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92B578B6227A0068003E989D /* Build configuration list for PBXNativeTarget "EthereumTypes-macOS" */ = {
+		92B578B6227A0068003E989D /* Build configuration list for PBXNativeTarget "Ethereum-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92B578B7227A0068003E989D /* Debug */,
@@ -1349,7 +1535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92B578B9227A0068003E989D /* Build configuration list for PBXNativeTarget "EthereumTypesTests-macOS" */ = {
+		92B578B9227A0068003E989D /* Build configuration list for PBXNativeTarget "EthereumTests-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92B578BA227A0068003E989D /* Debug */,

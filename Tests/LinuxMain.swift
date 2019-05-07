@@ -1,8 +1,8 @@
 import XCTest
 
-import EthereumTypesTests
+import EthereumTests
 
 var tests = [XCTestCaseEntry]()
-tests += EthereumTypesTests.__allTests()
+tests += EthereumTests.__allTests()
 
 XCTMain(tests)

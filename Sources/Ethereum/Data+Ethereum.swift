@@ -23,8 +23,8 @@ import CryptoSwift
 
 public extension Data {
     
-    init(quantity hex: String) {
-        var fixed = hex
+    init(trimmedHex: String) {
+        var fixed = trimmedHex
         if fixed.count >= 2 && fixed.starts(with: "0x") {
             let index = fixed.index(fixed.startIndex, offsetBy: 2)
             fixed = String(fixed[index...])
@@ -35,7 +35,7 @@ public extension Data {
         self.init(hex: fixed)
     }
     
-    var quantityHex: String {
+    var trimmedHex: String {
         var oldBytes = self.bytes
         var str = "0x"
         var bytes = Array<UInt8>()
@@ -61,5 +61,26 @@ public extension Data {
         }
         
         return str
+    }
+
+    var trimmedLeadingZeros: Data {
+        // trim leading zeros
+        var from = 0
+        while from < count-1 && self[from] == 0x00 {
+            from += 1
+        }
+        return self[from...]
+    }
+    
+    var bigEndianUInt: UInt? {
+        guard self.count <= MemoryLayout<UInt>.size else {
+            return nil
+        }
+        var number: UInt = 0
+        for i in (0 ..< self.count).reversed() {
+            number = number | (UInt(self[self.count - i - 1]) << (i * 8))
+        }
+        
+        return number
     }
 }

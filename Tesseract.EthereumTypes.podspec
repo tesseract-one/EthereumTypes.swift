@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Tesseract.EthereumTypes'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'Tesseract Platform Ethereum types and definitions for Swift'
 
   s.description      = <<-DESC
@@ -19,9 +19,9 @@ Base types, definitions and protocols for Ethereum support in Tesseract Platform
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
 
-  s.module_name = 'EthereumTypes'
+  s.module_name = 'Ethereum'
 
-  s.source_files = 'Sources/EthereumTypes/**/*.swift'
+  s.source_files = 'Sources/Ethereum/**/*.swift'
 
   s.dependency 'BigInt', '~> 4.0'
   s.dependency 'CryptoSwift', '~> 1.0'
