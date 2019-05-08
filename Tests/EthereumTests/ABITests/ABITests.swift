@@ -13,61 +13,52 @@ import BigInt
 
 class ABITests: XCTestCase {
     
+    func testSolidityExamples() {
+        let uint = UInt32(69)
+        let bool = true
+        let signature1 = "0xcdcd77c0"
+        
+        let encoded1 = try! ABIEncoder.encode([.uint(uint), .bool(bool)])
+        let result1 = signature1 + encoded1
+        XCTAssertEqual(result1, "0xcdcd77c000000000000000000000000000000000000000000000000000000000000000450000000000000000000000000000000000000000000000000000000000000001", "should match example 1")
+        
+        let bytes = [ Data("abc".utf8), Data("def".utf8) ]
+        let signature2 = "0xfce353f6"
+        let encoded2 = try! ABIEncoder.encode([.fixedArray(bytes, elementType: .bytes(length: 3), length: 2)])
+        let result2 = signature2 + encoded2
+        XCTAssertEqual(result2, "0xfce353f661626300000000000000000000000000000000000000000000000000000000006465660000000000000000000000000000000000000000000000000000000000", "should match example 2")
+        
+        let data = Data("dave".utf8)
+        let array = [BigInt(1), BigInt(2), BigInt(3)]
+        let signature3 = "0xa5643bf2"
+        let types: [SolidityType] = [.bytes(length: nil), .bool, .array(type: .uint, length: nil)]
+        let values: [ABIEncodable] = [data, bool, array]
+        let typeValues = zip(types, values).map { SolidityWrappedValue(value: $1, type: $0) }
+        let result3 = try! signature3 + ABIEncoder.encode(typeValues)
+        let expected = "0xa5643bf20000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000464617665000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003"
+        XCTAssertEqual(expected, result3, "should match example 3")
+    }
+    
+    func testABIEncoder() {
+        let expected = "0000000000000000000000000000000000000000000000000000000000000001"
+        let number = BigUInt(1)
+        
+        XCTAssertEqual(try! ABIEncoder.encode(.uint(number)), expected, "should encode wrapped values")
+        
+        let array = [
+            try! Address(hex: "0xD11Aa575f9C6f30bEDF392872726b2B157C83131", eip55: false),
+            try! Address(hex: "0x9F2c4Ea0506EeAb4e4Dc634C1e1F4Be71D0d7531", eip55: false)
+        ]
+        let test = try! ABIEncoder.encode(.array(array))
+        let expected2 = "00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000002000000000000000000000000d11aa575f9c6f30bedf392872726b2b157c831310000000000000000000000009f2c4ea0506eeab4e4dc634c1e1f4be71d0d7531"
+        XCTAssertEqual(test, expected2, "should encode array of non dynamic objects")
+        
+        let array2 = ["abc", "def", "ghi", "jkl", "mno"]
+        let test2 = try! ABIEncoder.encode(.array(array2))
+        let expected3 = "0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000000036162630000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000364656600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003676869000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000036a6b6c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000036d6e6f0000000000000000000000000000000000000000000000000000000000"
+        XCTAssertEqual(test2, expected3, "should encode array of non dynamic objects")
+    }
 //    override func spec() {
-//        
-//        describe("Solidity Examples") {
-//            
-//            context("when executed with Web3.swift ABI module") {
-//                
-//                it("should match example 1") {
-//                    let uint = UInt32(69)
-//                    let bool = true
-//                    let signature = "0xcdcd77c0"
-//                    do {
-//                        let encoded = try ABI.encodeParameters([.uint(uint), .bool(bool)])
-//                        let result = signature + encoded.replacingOccurrences(of: "0x", with: "")
-//                        let expected = "0xcdcd77c000000000000000000000000000000000000000000000000000000000000000450000000000000000000000000000000000000000000000000000000000000001"
-//                        expect(result).to(equal(expected))
-//                    } catch {
-//                        fail()
-//                    }
-//                }
-//                
-//                it("should match example 2") {
-//                    let bytes = [
-//                        Data("abc".utf8),
-//                        Data("def".utf8)
-//                    ]
-//                    let signature = "0xfce353f6"
-//                    do {
-//                        let encoded = try ABI.encodeParameters([.fixedArray(bytes, elementType: .bytes(length: 3), length: 2)])
-//                        let result = signature + encoded.replacingOccurrences(of: "0x", with: "")
-//                        let expected = "0xfce353f661626300000000000000000000000000000000000000000000000000000000006465660000000000000000000000000000000000000000000000000000000000"
-//                        expect(result).to(equal(expected))
-//                    } catch {
-//                        fail()
-//                    }
-//                }
-//                
-//                it("should match example 3") {
-//                    let data = Data("dave".utf8)
-//                    let bool = true
-//                    let array = [BigInt(1), BigInt(2), BigInt(3)]
-//                    let signature = "0xa5643bf2"
-//                    do {
-//                        let encoded = try ABI.encodeParameters(types: [.bytes(length: nil), .bool, .array(type: .uint, length: nil)], values: [data, bool, array])
-//                        let result = signature + encoded.replacingOccurrences(of: "0x", with: "")
-//                        let expected = "0xa5643bf20000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000464617665000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003"
-//                        expect(result).to(equal(expected))
-//                    } catch {
-//                        fail()
-//                    }
-//                }
-//                
-//            }
-//            
-//        }
-//        
 //        describe("ABI encoder") {
 //            
 //            context("when encoding single values") {
