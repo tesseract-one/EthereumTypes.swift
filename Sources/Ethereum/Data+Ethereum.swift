@@ -69,7 +69,7 @@ public extension Data {
         while from < count-1 && self[from] == 0x00 {
             from += 1
         }
-        return self[from...]
+        return Data(self[from...].bytes) // Fix for Swift slicing bug
     }
     
     var bigEndianUInt: UInt? {
@@ -77,8 +77,9 @@ public extension Data {
             return nil
         }
         var number: UInt = 0
-        for i in (0 ..< self.count).reversed() {
-            number = number | (UInt(self[self.count - i - 1]) << (i * 8))
+        let bytes = self.bytes // Fix for Swift slicing bug
+        for i in (0 ..< bytes.count).reversed() {
+            number = number | (UInt(bytes[bytes.count - i - 1]) << (i * 8))
         }
         
         return number

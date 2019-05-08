@@ -16,13 +16,17 @@ public struct EthData: Hashable, Equatable {
     }
     
     public init(hex: String) throws {
-        let data = Data(trimmedHex: hex)
-        guard data.count > 0 else { throw Error.hexIsMalformed }
-        self.init(data)
+        if hex.count == 0 || hex == "0x" {
+            self.init(Data())
+        } else {
+            let data = Data(hex: hex)
+            guard data.count > 0 else { throw Error.hexIsMalformed }
+            self.init(data)
+        }
     }
 
     public var hex: String {
-        return data.trimmedHex
+        return "0x" + data.toHexString()
     }
     
     public enum Error: Swift.Error {

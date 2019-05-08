@@ -18,7 +18,9 @@ public struct Quantity: Hashable, Equatable {
     }
     
     public init(hex: String) throws {
-        try self.init(data: EthData(hex: hex).data)
+        let data = Data(trimmedHex: hex)
+        guard data.count > 0 else { throw EthData.Error.hexIsMalformed }
+        self.init(data: data)
     }
 
     public init(_ quantity: BigUInt) {

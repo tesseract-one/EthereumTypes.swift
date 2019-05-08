@@ -52,7 +52,7 @@ extension UnsignedInteger {
         var bytes = Data()
         (1...size).forEach { _ in
             bytes.insert(UInt8(UInt64(copy & byteMask)), at: 0)
-            copy = copy >> 8
+            copy /= 256 // >> 8 by Ethereum spec
         }
         return bytes
     }
