@@ -4,7 +4,7 @@
 
 env:
   global:
-    - MODULE_NAME=EthereumTypes
+    - MODULE_NAME=Ethereum
 
 # Run tests on Ubuntu and macOS
 matrix:
