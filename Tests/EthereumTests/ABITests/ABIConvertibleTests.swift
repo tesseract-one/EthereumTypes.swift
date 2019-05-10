@@ -43,11 +43,11 @@ class ABIConvertibleTests: XCTestCase {
         XCTAssertEqual(eu64, expected, "should encode UInt64")
         XCTAssertEqual(eu256, expected, "should encode BigUInt")
         
-        XCTAssertEqual(UInt8(hexString: expected), 255, "should decode UInt8")
-        XCTAssertEqual(UInt16(hexString: expected), 255, "should decode UInt16")
-        XCTAssertEqual(UInt32(hexString: expected), 255, "should decode UInt32")
-        XCTAssertEqual(UInt64(hexString: expected), 255, "should decode UInt64")
-        XCTAssertEqual(BigUInt(hexString: expected), 255, "should decode BigUInt")
+        XCTAssertEqual(UInt8(ethAbiHexString: expected), 255, "should decode UInt8")
+        XCTAssertEqual(UInt16(ethAbiHexString: expected), 255, "should decode UInt16")
+        XCTAssertEqual(UInt32(ethAbiHexString: expected), 255, "should decode UInt32")
+        XCTAssertEqual(UInt64(ethAbiHexString: expected), 255, "should decode UInt64")
+        XCTAssertEqual(BigUInt(ethAbiHexString: expected), 255, "should decode BigUInt")
     }
     
     func testSignedIntegers() {
@@ -93,35 +93,35 @@ class ABIConvertibleTests: XCTestCase {
     }
     
     func testSignedIntegersDecodeHex() {
-        XCTAssertEqual(Int(hexString: "0000000000000000000000000000000000000000000000000000000000000020"), 32, "should decode Int")
-        XCTAssertEqual(Int32(hexString: "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb50"), -1200, "should decode negative values")
-        XCTAssertEqual(Int64(hexString: "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffda8"), -600, "should decode negative values")
-        XCTAssertEqual(BigInt(hexString: "000000000000000000000000000000000000000000000000000000000e4e1c00"), BigInt(240000000), "should decode BigInt values")
-        XCTAssertEqual(BigInt(hexString: "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"), BigInt(-1), "should decode negative BigInt values")
+        XCTAssertEqual(Int(ethAbiHexString: "0000000000000000000000000000000000000000000000000000000000000020"), 32, "should decode Int")
+        XCTAssertEqual(Int32(ethAbiHexString: "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb50"), -1200, "should decode negative values")
+        XCTAssertEqual(Int64(ethAbiHexString: "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffda8"), -600, "should decode negative values")
+        XCTAssertEqual(BigInt(ethAbiHexString: "000000000000000000000000000000000000000000000000000000000e4e1c00"), BigInt(240000000), "should decode BigInt values")
+        XCTAssertEqual(BigInt(ethAbiHexString: "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"), BigInt(-1), "should decode negative BigInt values")
     }
     
     func testBool() {
         XCTAssertEqual(true.abiEncode(dynamic: false), "0000000000000000000000000000000000000000000000000000000000000001", "should encode true")
         XCTAssertEqual(false.abiEncode(dynamic: false), "0000000000000000000000000000000000000000000000000000000000000000", "should encode false")
-        XCTAssertEqual(Bool(hexString: "0000000000000000000000000000000000000000000000000000000000000001"), true, "should decode true")
-        XCTAssertEqual(Bool(hexString: "0000000000000000000000000000000000000000000000000000000000000000"), false, "should decode false")
-        XCTAssertNil(Bool(hexString: "HI"), "should not decode non hex strings")
+        XCTAssertEqual(Bool(ethAbiHexString: "0000000000000000000000000000000000000000000000000000000000000001"), true, "should decode true")
+        XCTAssertEqual(Bool(ethAbiHexString: "0000000000000000000000000000000000000000000000000000000000000000"), false, "should decode false")
+        XCTAssertNil(Bool(ethAbiHexString: "HI"), "should not decode non hex strings")
     }
     
     func testString() {
         XCTAssertEqual("Hello World!".abiEncode(dynamic: true), "000000000000000000000000000000000000000000000000000000000000000c48656c6c6f20576f726c64210000000000000000000000000000000000000000", "encodes 'Hello World!'")
         XCTAssertEqual("What‘s happening?".abiEncode(dynamic: true), "000000000000000000000000000000000000000000000000000000000000001357686174e28098732068617070656e696e673f00000000000000000000000000", "encodes 'Whats happening?'")
-        XCTAssertEqual(String(hexString: "000000000000000000000000000000000000000000000000000000000000000c48656c6c6f20576f726c64210000000000000000000000000000000000000000"), "Hello World!", "decodes 'Hello World!'")
-        XCTAssertEqual(String(hexString: "000000000000000000000000000000000000000000000000000000000000001357686174e28098732068617070656e696e673f00000000000000000000000000"), "What‘s happening?", "decodes 'Whats happening?'")
-        XCTAssertNil(String(hexString: "00000"), "does not decode invalid data")
+        XCTAssertEqual(String(ethAbiHexString: "000000000000000000000000000000000000000000000000000000000000000c48656c6c6f20576f726c64210000000000000000000000000000000000000000"), "Hello World!", "decodes 'Hello World!'")
+        XCTAssertEqual(String(ethAbiHexString: "000000000000000000000000000000000000000000000000000000000000001357686174e28098732068617070656e696e673f00000000000000000000000000"), "What‘s happening?", "decodes 'Whats happening?'")
+        XCTAssertNil(String(ethAbiHexString: "00000"), "does not decode invalid data")
     }
     
     func testAddress() {
         let test = try! Address(hex: "0x9F2c4Ea0506EeAb4e4Dc634C1e1F4Be71D0d7531")
         let hex = "0000000000000000000000009f2c4ea0506eeab4e4dc634c1e1f4be71d0d7531"
         XCTAssertEqual(test.abiEncode(dynamic: false), hex, "should be able to be encoded to hex")
-        XCTAssertEqual(Address(hexString: hex), test, "should be able to be decoded from hex")
-        XCTAssertNil(Address(hexString: "0000000000000000000000009f2c4ea0506eeab4e4dc634c1e1f4be71d0d75XX"), "should not decode invalid data")
+        XCTAssertEqual(Address(ethAbiHexString: hex), test, "should be able to be decoded from hex")
+        XCTAssertNil(Address(ethAbiHexString: "0000000000000000000000009f2c4ea0506eeab4e4dc634c1e1f4be71d0d75XX"), "should not decode invalid data")
     }
     
     func testData() {
@@ -135,11 +135,11 @@ class ABIConvertibleTests: XCTestCase {
         
         let test3 = "00000000000000000000000000000000000000000000000000000000000000090102030405060708090000000000000000000000000000000000000000000000"
         let expected3 = Data([1, 2, 3, 4, 5, 6, 7, 8, 9])
-        XCTAssertEqual(Data(hexString: test3), expected3, "should decode Data from dynamic bytes")
+        XCTAssertEqual(Data(ethAbiHexString: test3), expected3, "should decode Data from dynamic bytes")
         
         let test4 = "006fde0000000000000000000000000000000000000000000000000000000000"
         let expected4 = Data([0, 111, 222])
-        XCTAssertEqual(Data(hexString: test4, length: 3), expected4, "should decode Data from fixed bytes")
+        XCTAssertEqual(Data(ethAbiHexString: test4, length: 3), expected4, "should decode Data from fixed bytes")
     }
     
     func testArray() {
@@ -154,18 +154,18 @@ class ABIConvertibleTests: XCTestCase {
         XCTAssertEqual(test2, expected2, "should encode as dynamic array")
         
         let string1 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003"
-        let test3 = [Int64].init(hexString: string1, length: 4)
+        let test3 = [Int64].init(ethAbiHexString: string1, length: 4)
         XCTAssertEqual(test3, array, "should decode a fixed array")
         
         let string2 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003"
-        let test4 = [Int64].init(hexString: string2)
+        let test4 = [Int64].init(ethAbiHexString: string2)
         XCTAssertNil(test4, "should not decode a fixed array without a length")
         
         let string3 = "00000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003"
-        let test5: [Int64]? = [Int64].init(hexString: string3)
+        let test5: [Int64]? = [Int64].init(ethAbiHexString: string3)
         XCTAssertEqual(test5, array, "should decode a dynamic array")
         
-        let test6 = [Int64].init(hexString: "00000000000000", length: 100)
+        let test6 = [Int64].init(ethAbiHexString: "00000000000000", length: 100)
         XCTAssertNil(test6, "should not decode a fixed array with wrong amount of bytes")
     }
 }
