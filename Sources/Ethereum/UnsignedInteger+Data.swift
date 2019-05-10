@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import BigInt
 
 
-extension UnsignedInteger {
+public extension UnsignedInteger {
 
     /**
      * Bytes are concatenated to make an UnsignedInteger Object (expected to be big endian)
@@ -21,7 +22,7 @@ extension UnsignedInteger {
      * - parameter bytes: The Data to be converted
      *
      */
-    public init(data: Data) {
+    init(data: Data) {
         let value: UInt64 = data.withUnsafeBytes { buffer in
             let bytes = buffer.bindMemory(to: UInt8.self)
             // 8 bytes in UInt64, etc. clips overflow
@@ -44,7 +45,7 @@ extension UnsignedInteger {
      * - parameter bytes: The Data to be converted
      *
     */
-    public init?(exactly data: Data) {
+    init?(exactly data: Data) {
         guard data.count <= MemoryLayout<Self>.size else {
             return nil
         }
@@ -63,7 +64,7 @@ extension UnsignedInteger {
      * - returns: The generated Data.
      *
      */
-    public var data: Data {
+    var data: Data {
         let byteMask: Self = 0b1111_1111
         let size = MemoryLayout<Self>.size
         var copy = self
@@ -73,5 +74,51 @@ extension UnsignedInteger {
             copy /= 256 // >> 8 by Ethereum spec
         }
         return bytes
+    }
+}
+
+
+// BigUInt needs it's own implementation, because it's bigger than UInt64.
+// It has own data methods so we are simply calling them.
+public extension BigUInt {
+    
+    /**
+     * Bytes are concatenated to make an BigUInt Object (expected to be big endian)
+     *
+     * [0b1111_1011, 0b0000_1111]
+     * =>
+     * 0b1111_1011_0000_1111
+     *
+     * - parameter bytes: The Data to be converted
+     *
+     */
+    init(data: Data) {
+        self.init(data)
+    }
+    
+    /**
+     * Bytes are concatenated to make an BigUInt Object (expected to be big endian)
+     *
+     * - parameter bytes: The Data to be converted
+     *
+     */
+    init?(exactly data: Data) {
+        self.init(data)
+    }
+    
+    /**
+     *
+     * Convert an BigUInt into its collection of bytes (big endian)
+     *
+     * 0b1111_1011_0000_1111
+     * =>
+     * [0b1111_1011, 0b0000_1111]
+     * ... etc.
+     *
+     * - returns: The generated Data.
+     *
+     */
+    var data: Data {
+        return serialize()
     }
 }

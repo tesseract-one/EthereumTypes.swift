@@ -69,7 +69,7 @@ extension RLPItem: ExpressibleByStringLiteral {
 extension RLPItem: ExpressibleByIntegerLiteral {
 
     public static func bigUInt(_ uint: BigUInt) -> RLPItem {
-        return self.init(valueType: .bytes(uint.serialize().trimmedLeadingZeros))
+        return self.init(valueType: .bytes(uint.data.trimmedLeadingZeros))
     }
 
     public static func uint(_ uint: UInt) -> RLPItem {
@@ -143,7 +143,7 @@ public extension RLPItem {
         guard case .bytes(let value) = valueType else {
             return nil
         }
-        return BigUInt(data: value)
+        return BigUInt(exactly: value)
     }
 
     /**
