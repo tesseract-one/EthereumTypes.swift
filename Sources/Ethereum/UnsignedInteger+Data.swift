@@ -22,15 +22,33 @@ extension UnsignedInteger {
      *
      */
     public init(data: Data) {
-        // 8 bytes in UInt64, etc. clips overflow
-        let prefix = data.suffix(MemoryLayout<Self>.size)
-        var value: UInt64 = 0
-        prefix.forEach { byte in
-            value <<= 8 // 1 byte is 8 bits
-            value |= UInt64(byte)
+        let value: UInt64 = data.withUnsafeBytes { buffer in
+            let bytes = buffer.bindMemory(to: UInt8.self)
+            // 8 bytes in UInt64, etc. clips overflow
+            let prefix = bytes.suffix(MemoryLayout<Self>.size)
+            var value: UInt64 = 0
+            for byte in prefix {
+                value <<= 8 // 1 byte is 8 bits
+                value |= UInt64(byte)
+            }
+            return value
         }
 
         self.init(value)
+    }
+    
+    /**
+     * Bytes are concatenated to make an UnsignedInteger Object (expected to be big endian)
+     * Checks that amount of bytes can be represented with the type of UnsignedInteger
+     *
+     * - parameter bytes: The Data to be converted
+     *
+    */
+    public init?(exactly data: Data) {
+        guard data.count <= MemoryLayout<Self>.size else {
+            return nil
+        }
+        self.init(data: data)
     }
 
     /**
@@ -49,8 +67,8 @@ extension UnsignedInteger {
         let byteMask: Self = 0b1111_1111
         let size = MemoryLayout<Self>.size
         var copy = self
-        var bytes = Data()
-        (1...size).forEach { _ in
+        var bytes = Data(capacity: size)
+        for _ in 1...size {
             bytes.insert(UInt8(UInt64(copy & byteMask)), at: 0)
             copy /= 256 // >> 8 by Ethereum spec
         }

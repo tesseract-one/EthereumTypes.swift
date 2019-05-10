@@ -177,7 +177,7 @@ open class RLPDecoder {
             guard rlp.count >= (Int(byteCount) + 1) else {
                 throw Error.inputMalformed
             }
-            guard let c = rlp[1..<(Int(byteCount) + 1)].bigEndianUInt else {
+            guard let c = UInt(exactly: rlp[1..<(Int(byteCount) + 1)]) else {
                 throw Error.inputTooLong
             }
             count = c
@@ -188,7 +188,7 @@ open class RLPDecoder {
             guard rlp.count >= (Int(byteCount) + 1) else {
                 throw Error.inputMalformed
             }
-            guard let c = rlp[1..<(Int(byteCount) + 1)].bigEndianUInt else {
+            guard let c = UInt(exactly: rlp[1..<(Int(byteCount) + 1)]) else {
                 throw Error.inputTooLong
             }
             count = c

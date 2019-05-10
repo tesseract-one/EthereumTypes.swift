@@ -30,15 +30,15 @@ public protocol ABIDecodable {
     /// Initialize with a hex string from Solidity
     ///
     /// - Parameter hexString: Solidity ABI encoded hex string containing this type
-    init?(hexString: String)
+    init?(ethAbiHexString: String)
 }
 
 // MARK: - Encoding
 
 extension FixedWidthInteger where Self: UnsignedInteger {
     
-    public init?(hexString: String) {
-        self.init(hexString, radix: 16)
+    public init?(ethAbiHexString: String) {
+        self.init(ethAbiHexString, radix: 16)
     }
     
     public func abiEncode(dynamic: Bool) -> String? {
@@ -52,9 +52,9 @@ extension FixedWidthInteger where Self: UnsignedInteger {
 
 extension FixedWidthInteger where Self: SignedInteger {
     
-    public init?(hexString: String) {
+    public init?(ethAbiHexString: String) {
         // convert to binary
-        var binaryString = hexString.hexToBinary()
+        var binaryString = ethAbiHexString.hexToBinary()
         // trim left padding to right amount of bits (abi segments are always padded to 256 bit)
         if binaryString.count > Self.bitWidth {
             binaryString = String(binaryString.dropFirst(binaryString.count - Self.bitWidth))
@@ -115,8 +115,8 @@ extension FixedWidthInteger where Self: SignedInteger {
 
 extension BigInt: ABIConvertible {
     
-    public init?(hexString: String) {
-        let binaryString = hexString.hexToBinary()
+    public init?(ethAbiHexString: String) {
+        let binaryString = ethAbiHexString.hexToBinary()
         self.init(twosComplementString: binaryString)
     }
     
@@ -156,8 +156,8 @@ extension BigInt: SolidityTypeRepresentable {
 
 extension BigUInt: ABIConvertible {
     
-    public init?(hexString: String) {
-        self.init(hexString, radix: 16)
+    public init?(ethAbiHexString: String) {
+        self.init(ethAbiHexString, radix: 16)
     }
     
     public func abiEncode(dynamic: Bool) -> String? {
@@ -175,8 +175,8 @@ extension BigUInt: SolidityTypeRepresentable {
 
 extension Bool: ABIConvertible {
     
-    public init?(hexString: String) {
-        if let numberValue = UInt(hexString, radix: 16) {
+    public init?(ethAbiHexString: String) {
+        if let numberValue = UInt(ethAbiHexString, radix: 16) {
             self = (numberValue == 1)
         } else {
             return nil
@@ -201,8 +201,8 @@ extension Bool: SolidityTypeRepresentable {
 
 extension String: ABIConvertible {
     
-    public init?(hexString: String) {
-        if let data = Data(hexString: hexString) {
+    public init?(ethAbiHexString: String) {
+        if let data = Data(ethAbiHexString: ethAbiHexString) {
             self.init(data: data, encoding: .utf8)
         } else {
             return nil
@@ -247,18 +247,18 @@ extension Array: ABIEncodable where Element: ABIEncodable {
 
 extension Array: ABIDecodable where Element: ABIDecodable {
     
-    public init?(hexString: String) {
-        let lengthString = hexString.substr(0, 64)
-        let valueString = String(hexString.dropFirst(64))
+    public init?(ethAbiHexString: String) {
+        let lengthString = ethAbiHexString.substr(0, 64)
+        let valueString = String(ethAbiHexString.dropFirst(64))
         guard let string = lengthString, let length = Int(string, radix: 16), length > 0 else { return nil }
-        self.init(hexString: valueString, length: length)
+        self.init(ethAbiHexString: valueString, length: length)
     }
     
-    public init?(hexString: String, length: Int) {
-        let itemLength = hexString.count / length
+    public init?(ethAbiHexString: String, length: Int) {
+        let itemLength = ethAbiHexString.count / length
         let values = (0..<length).compactMap { i -> Element? in
-            if let elementString = hexString.substr(i * itemLength, itemLength) {
-                return Element.init(hexString: elementString)
+            if let elementString = ethAbiHexString.substr(i * itemLength, itemLength) {
+                return Element.init(ethAbiHexString: elementString)
             }
             return nil
         }
@@ -277,22 +277,22 @@ extension Array: ABIConvertible where Element: ABIConvertible {}
 
 extension Data: ABIConvertible {
     
-    public init?(hexString: String) {
+    public init?(ethAbiHexString: String) {
         //split segments
-        let lengthString = hexString.substr(0, 64)
-        let valueString = String(hexString.dropFirst(64))
+        let lengthString = ethAbiHexString.substr(0, 64)
+        let valueString = String(ethAbiHexString.dropFirst(64))
         //calculate length
         guard let string = lengthString, let length = Int(string, radix: 16), length > 0 else { return nil }
         //convert to bytes
-        let bytes = valueString.hexToBytes()
+        let bytes = Data(trimmedHex: valueString)
         //trim bytes to length
         let trimmedBytes = bytes.prefix(length)
         self.init(trimmedBytes)
     }
     
-    public init?(hexString: String, length: UInt) {
+    public init(ethAbiHexString: String, length: UInt) {
         //convert to bytes
-        let bytes = hexString.hexToBytes()
+        let bytes = Data(trimmedHex: ethAbiHexString)
         //trim bytes to length
         let trimmedBytes = bytes.prefix(Int(length))
         self.init(trimmedBytes)
@@ -319,9 +319,9 @@ extension Data: ABIConvertible {
 
 extension Address: ABIConvertible {
     
-    public init?(hexString: String) {
+    public init?(ethAbiHexString: String) {
         // trim whitespace to 160 bytes
-        let trimmedString = String(hexString.dropFirst(hexString.count - 40))
+        let trimmedString = String(ethAbiHexString.dropFirst(ethAbiHexString.count - 40))
         // initialize address
         if let address = try? Address(hex: trimmedString, eip55: false) {
             self = address

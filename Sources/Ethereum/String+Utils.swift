@@ -31,20 +31,9 @@ public extension String {
     ///
     /// - Returns: String in binary format
     func hexToBinary() -> String {
-        return hexToBytes().map({ byte in
+        return Data(trimmedHex: self).map({ byte in
             return String(byte, radix: 2).paddingLeft(toLength: 8, withPad: "0")
         }).joined()
-    }
-    
-    /// Converts a hex string into an Data
-    ///
-    /// - Returns: Array of 8 bit bytes
-    func hexToBytes() -> Data {
-        var value = self
-        if self.count % 2 > 0 {
-            value = "0" + value
-        }
-        return Data(hex: value)
     }
     
     /// Conveniently create a substring to more easily match JavaScript APIs
