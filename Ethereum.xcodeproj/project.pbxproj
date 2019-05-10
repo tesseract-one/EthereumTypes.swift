@@ -154,6 +154,9 @@
 		D12549A922860AA10025277B /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12549A822860AA10025277B /* AddressTests.swift */; };
 		D12549AA22860AA10025277B /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12549A822860AA10025277B /* AddressTests.swift */; };
 		D12549AB22860AA10025277B /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12549A822860AA10025277B /* AddressTests.swift */; };
+		D188B6F422861B2B00E5EE99 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188B6F322861B2B00E5EE99 /* TransactionTests.swift */; };
+		D188B6F522861B2B00E5EE99 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188B6F322861B2B00E5EE99 /* TransactionTests.swift */; };
+		D188B6F622861B2B00E5EE99 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188B6F322861B2B00E5EE99 /* TransactionTests.swift */; };
 		D19AD0642285D09D002E933D /* RLPEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AD0632285D09D002E933D /* RLPEncoderTests.swift */; };
 		D19AD0652285D09D002E933D /* RLPEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AD0632285D09D002E933D /* RLPEncoderTests.swift */; };
 		D19AD0662285D09D002E933D /* RLPEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AD0632285D09D002E933D /* RLPEncoderTests.swift */; };
@@ -282,6 +285,7 @@
 		92C64A58228213C400F547C3 /* EthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthData.swift; sourceTree = "<group>"; };
 		D12549A32285FFB70025277B /* RLPItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPItemTests.swift; sourceTree = "<group>"; };
 		D12549A822860AA10025277B /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		D188B6F322861B2B00E5EE99 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		D19AD0632285D09D002E933D /* RLPEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPEncoderTests.swift; sourceTree = "<group>"; };
 		D19AD0672285E24C002E933D /* RLPDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPDecoderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -527,6 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				D12549A822860AA10025277B /* AddressTests.swift */,
+				D188B6F322861B2B00E5EE99 /* TransactionTests.swift */,
 			);
 			path = TransactionTests;
 			sourceTree = "<group>";
@@ -863,6 +868,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C649DE2281EA6B00F547C3 /* ABITests.swift in Sources */,
+				D188B6F522861B2B00E5EE99 /* TransactionTests.swift in Sources */,
 				D19AD0692285E24C002E933D /* RLPDecoderTests.swift in Sources */,
 				D12549AA22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E42281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
@@ -940,6 +946,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C649DF2281EA6B00F547C3 /* ABITests.swift in Sources */,
+				D188B6F622861B2B00E5EE99 /* TransactionTests.swift in Sources */,
 				D19AD06A2285E24C002E933D /* RLPDecoderTests.swift in Sources */,
 				D12549AB22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E52281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
@@ -986,6 +993,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C649DD2281EA6B00F547C3 /* ABITests.swift in Sources */,
+				D188B6F422861B2B00E5EE99 /* TransactionTests.swift in Sources */,
 				D19AD0682285E24C002E933D /* RLPDecoderTests.swift in Sources */,
 				D12549A922860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E32281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,

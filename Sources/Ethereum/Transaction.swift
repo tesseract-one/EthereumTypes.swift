@@ -46,28 +46,32 @@ public struct Transaction: Codable, Hashable, Equatable {
     public var to: Address?
     
     /// Value to transfer provided in Wei
-    public var value: Quantity?
+    public var value: Quantity
     
     /// Input data for this transaction
-    public var data: EthData
+    public var data: EthData?
     
     public init(
         nonce: Quantity? = nil, gasPrice: Quantity? = nil, gas: Quantity? = nil,
-        from: Address? = nil, to: Address? = nil, value: Quantity? = nil,
+        from: Address? = nil, to: Address? = nil, value: Quantity = 0,
         data: EthData? = nil
-    ) {
+    ) throws {
+        guard (data != nil && data!.data.count > 0) || to != nil else {
+            throw Transaction.Error.transactionInvalid
+        }
+        
         self.nonce = nonce
         self.gasPrice = gasPrice
         self.gas = gas
         self.from = from
         self.to = to
         self.value = value
-        self.data = data ?? EthData(Data())
+        self.data = data
     }
     
     public func rlp(chainId: Quantity = 0) throws -> RLPItem {
         // These values are required for signing
-        guard let nonce = nonce, let gasPrice = gasPrice, let gasLimit = gas, let value = value else {
+        guard let nonce = nonce, let gasPrice = gasPrice, let gasLimit = gas else {
             throw Error.transactionInvalid
         }
         let rlp = RLPItem(
@@ -105,7 +109,7 @@ extension RLPItem {
         gasLimit: Quantity,
         to: Address?,
         value: Quantity,
-        data: EthData,
+        data: EthData?,
         v: Quantity,
         r: Quantity,
         s: Quantity
@@ -116,7 +120,7 @@ extension RLPItem {
             .bigUInt(gasLimit.quantity),
             .bytes(to?.rawValue ?? Data()),
             .bigUInt(value.quantity),
-            .bytes(data.data),
+            .bytes(data?.data ?? Data()),
             .bigUInt(v.quantity),
             .bigUInt(r.quantity),
             .bigUInt(s.quantity)
