@@ -36,31 +36,8 @@ open class RLPDecoder {
      * - returns: A new instance of `RLPItem` which represents the given rlp encoded `Byte` array.
      */
     open func decode(_ rlp: Data) throws -> RLPItem {
-        guard rlp.count > 0 else {
-            throw Error.inputEmpty
-        }
-        let sign = rlp[0]
-
-        if sign >= 0x00 && sign <= 0x7f {
-            guard rlp.count == 1 else {
-                throw Error.inputMalformed
-            }
-            return .bytes(sign)
-        } else if sign >= 0x80 && sign <= 0xb7 {
-            let count = sign - 0x80
-            guard rlp.count == count + 1 else {
-                throw Error.inputMalformed
-            }
-            let bytes = rlp[1..<rlp.count]
-            return .bytes(bytes)
-        } else if sign >= 0xb8 && sign <= 0xbf {
-            return try decodeLongBytes(sign: sign, rlp: rlp)
-        } else if sign >= 0xc0 && sign <= 0xf7 {
-            return try decodeShortArray(sign: sign, rlp: rlp)
-        } else if sign >= 0xf8 && sign <= 0xff {
-            return try decodeLongArray(sign: sign, rlp: rlp)
-        } else {
-            throw Error.lengthPrefixMalformed
+        return try rlp.withUnsafeBytes { buffer in
+            return try self.decode(rlp: buffer.bindMemory(to: UInt8.self))
         }
     }
 
@@ -74,10 +51,40 @@ open class RLPDecoder {
 
         case lengthPrefixMalformed
     }
-
+    
     // MARK: - Helper methods
+    
+    private func decode(rlp: UnsafeBufferPointer<UInt8>) throws -> RLPItem {
+        guard rlp.count > 0 else {
+            throw Error.inputEmpty
+        }
+        
+        let sign = rlp[0]
+        
+        if sign >= 0x00 && sign <= 0x7f {
+            guard rlp.count == 1 else {
+                throw Error.inputMalformed
+            }
+            return .bytes(sign)
+        } else if sign >= 0x80 && sign <= 0xb7 {
+            let count = sign - 0x80
+            guard rlp.count == count + 1 else {
+                throw Error.inputMalformed
+            }
+            let bytes = rlp[1..<rlp.count]
+            return .bytes(Data(bytes))
+        } else if sign >= 0xb8 && sign <= 0xbf {
+            return try decodeLongBytes(sign: sign, rlp: rlp)
+        } else if sign >= 0xc0 && sign <= 0xf7 {
+            return try decodeShortArray(sign: sign, rlp: rlp)
+        } else if sign >= 0xf8 && sign <= 0xff {
+            return try decodeLongArray(sign: sign, rlp: rlp)
+        } else {
+            throw Error.lengthPrefixMalformed
+        }
+    }
 
-    private func decodeLongBytes(sign: UInt8, rlp: Data) throws -> RLPItem {
+    private func decodeLongBytes(sign: UInt8, rlp: UnsafeBufferPointer<UInt8>) throws -> RLPItem {
         let byteCount = sign - 0xb7
         guard byteCount <= 8 else {
             throw Error.inputTooLong
@@ -91,10 +98,10 @@ open class RLPDecoder {
         }
 
         let bytes = rlp[(Int(byteCount) + 1) ..< Int(rlpCount)]
-        return .bytes(bytes)
+        return .bytes(Data(bytes))
     }
 
-    private func decodeShortArray(sign: UInt8, rlp: Data) throws -> RLPItem {
+    private func decodeShortArray(sign: UInt8, rlp: UnsafeBufferPointer<UInt8>) throws -> RLPItem {
         let totalCount = sign - 0xc0
         guard rlp.count == totalCount + 1 else {
             throw Error.inputMalformed
@@ -106,14 +113,15 @@ open class RLPDecoder {
 
         var pointer = 1
         while pointer < rlp.count {
-            let count = try getCount(rlp: rlp[pointer...])
+            let start = UnsafeBufferPointer<UInt8>(rebasing: rlp[pointer...])
+            let count = try getCount(rlp: start)
 
             guard rlp.count >= (pointer + count + 1) else {
                 throw Error.inputMalformed
             }
 
-            let itemRLP = rlp[pointer..<(pointer + count + 1)]
-            try items.append(decode(itemRLP))
+            let itemRLP = UnsafeBufferPointer<UInt8>(rebasing: rlp[pointer..<(pointer + count + 1)])
+            try items.append(decode(rlp: itemRLP))
 
             pointer += (count + 1)
         }
@@ -121,7 +129,7 @@ open class RLPDecoder {
         return .array(items)
     }
 
-    private func decodeLongArray(sign: UInt8, rlp: Data) throws -> RLPItem {
+    private func decodeLongArray(sign: UInt8, rlp: UnsafeBufferPointer<UInt8>) throws -> RLPItem {
         let byteCount = sign - 0xf7
         guard byteCount <= 8 else {
             throw Error.inputTooLong
@@ -138,14 +146,15 @@ open class RLPDecoder {
         // We start after the length defining bytes (and the first byte)
         var pointer = Int(byteCount) + 1
         while pointer < rlp.count {
-            let count = try getCount(rlp: rlp[pointer...]) + Int(getLengthByteCount(sign: rlp[pointer]))
+            let start = UnsafeBufferPointer<UInt8>(rebasing: rlp[pointer...])
+            let count = try getCount(rlp: start) + Int(getLengthByteCount(sign: rlp[pointer]))
 
             guard rlp.count >= (pointer + count + 1) else {
                 throw Error.inputMalformed
             }
 
-            let itemRLP = rlp[pointer..<(pointer + count + 1)]
-            try items.append(decode(itemRLP))
+            let itemRLP = UnsafeBufferPointer<UInt8>(rebasing: rlp[pointer..<(pointer + count + 1)])
+            try items.append(decode(rlp: itemRLP))
 
             pointer += (count + 1)
         }
@@ -162,7 +171,7 @@ open class RLPDecoder {
      *
      * - returns: The length of the given rlp as defined in its signature.
      */
-    private func getCount(rlp: Data) throws -> Int {
+    private func getCount(rlp: UnsafeBufferPointer<UInt8>) throws -> Int {
         guard rlp.count > 0 else {
             throw Error.inputMalformed
         }
@@ -177,7 +186,7 @@ open class RLPDecoder {
             guard rlp.count >= (Int(byteCount) + 1) else {
                 throw Error.inputMalformed
             }
-            guard let c = rlp[1..<(Int(byteCount) + 1)].bigEndianUInt else {
+            guard let c = UInt(exactly: Data(rlp[1..<(Int(byteCount) + 1)])) else {
                 throw Error.inputTooLong
             }
             count = c
@@ -188,7 +197,7 @@ open class RLPDecoder {
             guard rlp.count >= (Int(byteCount) + 1) else {
                 throw Error.inputMalformed
             }
-            guard let c = rlp[1..<(Int(byteCount) + 1)].bigEndianUInt else {
+            guard let c = UInt(exactly: Data(rlp[1..<(Int(byteCount) + 1)])) else {
                 throw Error.inputTooLong
             }
             count = c

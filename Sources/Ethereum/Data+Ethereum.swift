@@ -23,6 +23,13 @@ import CryptoSwift
 
 public extension Data {
     
+    /**
+     * Creates Data object from trimmed leading zeroes hex representation (big-endian)
+     * Can wotrk with '0x' prefixed and unprefixed strings
+     *
+     * - parameter trimmedHex: The hex String to be converted
+     *
+     */
     init(trimmedHex: String) {
         var fixed = trimmedHex
         if fixed.count >= 2 && fixed.starts(with: "0x") {
@@ -35,53 +42,33 @@ public extension Data {
         self.init(hex: fixed)
     }
     
+    /**
+     * Returns hex represenation with trimmed leading zeroes (big-endian)
+     * Prefixed with '0x'
+     */
     var trimmedHex: String {
-        var oldBytes = self.bytes
-        var str = "0x"
-        var bytes = Array<UInt8>()
-        
-        var leading = true
-        for i in 0 ..< oldBytes.count {
-            if leading && oldBytes[i] == 0x00 {
-                continue
-            }
-            leading = false
-            bytes.append(oldBytes[i])
-        }
-        
-        if bytes.count > 0 {
+        let trimmed = trimmedLeadingZeros
+        if trimmed.count > 0 {
             // If there is one leading zero (4 bit) left, this one removes it
-            str += String(bytes[0], radix: 16)
-            
-            for i in 1..<bytes.count {
-                str += String(format: "%02x", bytes[i])
-            }
+            return "0x" + String(trimmed[0], radix: 16) + trimmed[1...].toHexString()
         } else {
-            str += "0"
+            return "0x0"
         }
-        
-        return str
     }
 
+    /**
+     * Returns Data object with trimmed leading zeroes (big-endian)
+     */
     var trimmedLeadingZeros: Data {
-        // trim leading zeros
-        var from = 0
-        while from < count-1 && self[from] == 0x00 {
-            from += 1
+        return withUnsafeBytes { buffer in
+            let bytes = buffer.bindMemory(to: UInt8.self)
+            var from = 0
+            // ignore leading zeros
+            while from < bytes.count-1 && bytes[from] == 0x00 {
+                from += 1
+            }
+            // Copy bytes
+            return Data(bytes[from...])
         }
-        return Data(self[from...].bytes) // Fix for Swift slicing bug
-    }
-    
-    var bigEndianUInt: UInt? {
-        guard self.count <= MemoryLayout<UInt>.size else {
-            return nil
-        }
-        var number: UInt = 0
-        let bytes = self.bytes // Fix for Swift slicing bug
-        for i in (0 ..< bytes.count).reversed() {
-            number = number | (UInt(bytes[bytes.count - i - 1]) << (i * 8))
-        }
-        
-        return number
     }
 }

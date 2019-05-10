@@ -162,7 +162,7 @@ extension TypedData {
                 return SolidityWrappedValue(value: bool, type: .bool)
             }
         case "address":
-            if let str = value.string, let address = try? Address(hex: str, eip55: false) {
+            if let str = value.string, let address = Address(ethAbiHexString: str) {
                 return SolidityWrappedValue(value: address, type: .address)
             }
         case let uint where uint.starts(with: "uint"):
@@ -171,7 +171,7 @@ extension TypedData {
             if let int = value.int {
                 return SolidityWrappedValue(value: Int(int), type: .type(.uint(bits: size)))
             }
-            if let str = value.string, let bigInt = BigUInt(hexString: str) {
+            if let str = value.string, let bigInt = BigUInt(ethAbiHexString: str) {
                 return SolidityWrappedValue(value: bigInt, type: .type(.uint(bits: size)))
             }
         case let int where int.starts(with: "int"):
@@ -180,13 +180,13 @@ extension TypedData {
             if let int = value.int {
                 return SolidityWrappedValue(value: Int(int), type: .type(.int(bits: size)))
             }
-            if let str = value.string, let bigInt = BigInt(hexString: str) {
+            if let str = value.string, let bigInt = BigInt(ethAbiHexString: str) {
                 return SolidityWrappedValue(value: bigInt, type: .type(.int(bits: size)))
             }
         case let bytes where bytes.starts(with: "bytes"):
             if let length = UInt(type.dropFirst("bytes".count)), let string = value.string {
                 if string.starts(with: "0x") { // Bytes
-                    return SolidityWrappedValue(value: Data(hex: string), type: .bytes(length: length))
+                    return SolidityWrappedValue(value: Data(ethAbiHexString: string, length: length), type: .bytes(length: length))
                 } else { // String
                     if let data = string.data(using: .utf8) {
                         return SolidityWrappedValue(value: data, type: .bytes(length: length))
