@@ -144,13 +144,16 @@
 		92C649EB2281EF3D00F547C3 /* SolidityType+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */; };
 		92C649EC2281EF3D00F547C3 /* SolidityType+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */; };
 		92C649ED2281EF3E00F547C3 /* SolidityType+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */; };
-		92C649EF2281F5B900F547C3 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649EE2281F5B900F547C3 /* AddressTests.swift */; };
-		92C649F02281F5B900F547C3 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649EE2281F5B900F547C3 /* AddressTests.swift */; };
-		92C649F12281F5B900F547C3 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C649EE2281F5B900F547C3 /* AddressTests.swift */; };
 		92C64A59228213C400F547C3 /* EthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C64A58228213C400F547C3 /* EthData.swift */; };
 		92C64A5A228213C400F547C3 /* EthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C64A58228213C400F547C3 /* EthData.swift */; };
 		92C64A5B228213C400F547C3 /* EthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C64A58228213C400F547C3 /* EthData.swift */; };
 		92C64A5C228213C400F547C3 /* EthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C64A58228213C400F547C3 /* EthData.swift */; };
+		D12549A42285FFB70025277B /* RLPItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12549A32285FFB70025277B /* RLPItemTests.swift */; };
+		D12549A52285FFB70025277B /* RLPItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12549A32285FFB70025277B /* RLPItemTests.swift */; };
+		D12549A62285FFB70025277B /* RLPItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12549A32285FFB70025277B /* RLPItemTests.swift */; };
+		D12549A922860AA10025277B /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12549A822860AA10025277B /* AddressTests.swift */; };
+		D12549AA22860AA10025277B /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12549A822860AA10025277B /* AddressTests.swift */; };
+		D12549AB22860AA10025277B /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12549A822860AA10025277B /* AddressTests.swift */; };
 		D19AD0642285D09D002E933D /* RLPEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AD0632285D09D002E933D /* RLPEncoderTests.swift */; };
 		D19AD0652285D09D002E933D /* RLPEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AD0632285D09D002E933D /* RLPEncoderTests.swift */; };
 		D19AD0662285D09D002E933D /* RLPEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AD0632285D09D002E933D /* RLPEncoderTests.swift */; };
@@ -276,8 +279,9 @@
 		92C649D82281EA6B00F547C3 /* WrappedValueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrappedValueTests.swift; sourceTree = "<group>"; };
 		92C649D92281EA6B00F547C3 /* SolidityTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidityTypeTests.swift; sourceTree = "<group>"; };
 		92C649E62281EF3700F547C3 /* SolidityType+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SolidityType+Codable.swift"; sourceTree = "<group>"; };
-		92C649EE2281F5B900F547C3 /* AddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
 		92C64A58228213C400F547C3 /* EthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthData.swift; sourceTree = "<group>"; };
+		D12549A32285FFB70025277B /* RLPItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPItemTests.swift; sourceTree = "<group>"; };
+		D12549A822860AA10025277B /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
 		D19AD0632285D09D002E933D /* RLPEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPEncoderTests.swift; sourceTree = "<group>"; };
 		D19AD0672285E24C002E933D /* RLPDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPDecoderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -409,9 +413,9 @@
 		927C59BB224D0BE800F2AA50 /* EthereumTests */ = {
 			isa = PBXGroup;
 			children = (
+				D12549A722860A840025277B /* TransactionTests */,
 				D19AD0622285D005002E933D /* RLPTests */,
 				92C649D52281EA4000F547C3 /* ABITests */,
-				92C649EE2281F5B900F547C3 /* AddressTests.swift */,
 				927C59BE224D0BE800F2AA50 /* Info.plist */,
 			);
 			path = EthereumTests;
@@ -519,11 +523,20 @@
 			path = ABITests;
 			sourceTree = "<group>";
 		};
+		D12549A722860A840025277B /* TransactionTests */ = {
+			isa = PBXGroup;
+			children = (
+				D12549A822860AA10025277B /* AddressTests.swift */,
+			);
+			path = TransactionTests;
+			sourceTree = "<group>";
+		};
 		D19AD0622285D005002E933D /* RLPTests */ = {
 			isa = PBXGroup;
 			children = (
 				D19AD0632285D09D002E933D /* RLPEncoderTests.swift */,
 				D19AD0672285E24C002E933D /* RLPDecoderTests.swift */,
+				D12549A32285FFB70025277B /* RLPItemTests.swift */,
 			);
 			path = RLPTests;
 			sourceTree = "<group>";
@@ -851,10 +864,11 @@
 			files = (
 				92C649DE2281EA6B00F547C3 /* ABITests.swift in Sources */,
 				D19AD0692285E24C002E933D /* RLPDecoderTests.swift in Sources */,
+				D12549AA22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E42281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E12281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
 				D19AD0652285D09D002E933D /* RLPEncoderTests.swift in Sources */,
-				92C649F02281F5B900F547C3 /* AddressTests.swift in Sources */,
+				D12549A52285FFB70025277B /* RLPItemTests.swift in Sources */,
 				92C649DB2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -927,10 +941,11 @@
 			files = (
 				92C649DF2281EA6B00F547C3 /* ABITests.swift in Sources */,
 				D19AD06A2285E24C002E933D /* RLPDecoderTests.swift in Sources */,
+				D12549AB22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E52281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E22281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
 				D19AD0662285D09D002E933D /* RLPEncoderTests.swift in Sources */,
-				92C649F12281F5B900F547C3 /* AddressTests.swift in Sources */,
+				D12549A62285FFB70025277B /* RLPItemTests.swift in Sources */,
 				92C649DC2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,10 +987,11 @@
 			files = (
 				92C649DD2281EA6B00F547C3 /* ABITests.swift in Sources */,
 				D19AD0682285E24C002E933D /* RLPDecoderTests.swift in Sources */,
+				D12549A922860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E32281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E02281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
 				D19AD0642285D09D002E933D /* RLPEncoderTests.swift in Sources */,
-				92C649EF2281F5B900F547C3 /* AddressTests.swift in Sources */,
+				D12549A42285FFB70025277B /* RLPItemTests.swift in Sources */,
 				92C649DA2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

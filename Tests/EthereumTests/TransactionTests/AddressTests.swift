@@ -7,13 +7,21 @@
 //
 
 import XCTest
+
 @testable import Ethereum
 
 extension Address {
     static let testAddress = try! Address(hex: "0x0000000000000000000000000000000000000000", eip55: false)
 }
-
-class AddressTests: XCTest {
+//
+//class AddressTests: XCTestCase {
+//
+//    func testAddressChecks() {
+//        let a1 = Address.testAddress
+//        XCTAssertNotNil(a1, "should be valid ethereum addresses")
+//        XCTAssertEqual(a1?.hex(eip55: false), "0x0000000000000000000000000000000000000000", "should be valid ethereum addresses")
+//    }
+//}
 
 //    override func spec() {
 //        describe("ethereum address checks") {
@@ -100,4 +108,4 @@ class AddressTests: XCTest {
 //            }
 //        }
 //    }
-}
+//}
