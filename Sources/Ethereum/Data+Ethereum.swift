@@ -22,7 +22,6 @@ import Foundation
 import CryptoSwift
 
 public extension Data {
-    
     /**
      * Creates Data object from trimmed leading zeroes hex representation (big-endian)
      * Can wotrk with '0x' prefixed and unprefixed strings
