@@ -166,6 +166,9 @@
 		D1BD6A2A2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */; };
 		D1BD6A2B2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */; };
 		D1BD6A2C2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */; };
+		D1BD6A2F2289AA4F00797A0E /* EthDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */; };
+		D1BD6A302289AA4F00797A0E /* EthDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */; };
+		D1BD6A312289AA4F00797A0E /* EthDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +295,7 @@
 		D19AD0632285D09D002E933D /* RLPEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPEncoderTests.swift; sourceTree = "<group>"; };
 		D19AD0672285E24C002E933D /* RLPDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPDecoderTests.swift; sourceTree = "<group>"; };
 		D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uint+DataRepresentableTests.swift"; sourceTree = "<group>"; };
+		D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthDataTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +425,7 @@
 		927C59BB224D0BE800F2AA50 /* EthereumTests */ = {
 			isa = PBXGroup;
 			children = (
+				D1BD6A2D2289AA1C00797A0E /* JsonTests */,
 				D1BD6A2322899EA200797A0E /* ToolboxTests */,
 				D12549A722860A840025277B /* TransactionTests */,
 				D19AD0622285D005002E933D /* RLPTests */,
@@ -557,6 +562,14 @@
 				D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */,
 			);
 			path = ToolboxTests;
+			sourceTree = "<group>";
+		};
+		D1BD6A2D2289AA1C00797A0E /* JsonTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */,
+			);
+			path = JsonTests;
 			sourceTree = "<group>";
 		};
 		F718DA00E8DE85304C9ACA48 /* Frameworks */ = {
@@ -890,6 +903,7 @@
 				D19AD0652285D09D002E933D /* RLPEncoderTests.swift in Sources */,
 				D12549A52285FFB70025277B /* RLPItemTests.swift in Sources */,
 				92C649DB2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
+				D1BD6A302289AA4F00797A0E /* EthDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,6 +983,7 @@
 				D19AD0662285D09D002E933D /* RLPEncoderTests.swift in Sources */,
 				D12549A62285FFB70025277B /* RLPItemTests.swift in Sources */,
 				92C649DC2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
+				D1BD6A312289AA4F00797A0E /* EthDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,6 +1032,7 @@
 				D19AD0642285D09D002E933D /* RLPEncoderTests.swift in Sources */,
 				D12549A42285FFB70025277B /* RLPItemTests.swift in Sources */,
 				92C649DA2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
+				D1BD6A2F2289AA4F00797A0E /* EthDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
