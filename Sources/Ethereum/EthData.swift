@@ -15,6 +15,10 @@ public struct EthData: Hashable, Equatable {
         self.data = data
     }
     
+    public init(_ bytes: [UInt8]) {
+        self.init(Data(bytes))
+    }
+    
     public init(hex: String) throws {
         if hex.count == 0 || hex == "0x" {
             self.init(Data())
