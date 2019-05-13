@@ -172,6 +172,9 @@
 		D1BD6A332289B1A400797A0E /* QuantityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A322289B1A400797A0E /* QuantityTests.swift */; };
 		D1BD6A342289B1A400797A0E /* QuantityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A322289B1A400797A0E /* QuantityTests.swift */; };
 		D1BD6A352289B1A400797A0E /* QuantityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A322289B1A400797A0E /* QuantityTests.swift */; };
+		D1BD6A372289BB3000797A0E /* ValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A362289BB3000797A0E /* ValueTests.swift */; };
+		D1BD6A382289BB3000797A0E /* ValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A362289BB3000797A0E /* ValueTests.swift */; };
+		D1BD6A392289BB3000797A0E /* ValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A362289BB3000797A0E /* ValueTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -300,6 +303,7 @@
 		D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uint+DataRepresentableTests.swift"; sourceTree = "<group>"; };
 		D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthDataTests.swift; sourceTree = "<group>"; };
 		D1BD6A322289B1A400797A0E /* QuantityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityTests.swift; sourceTree = "<group>"; };
+		D1BD6A362289BB3000797A0E /* ValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -573,6 +577,7 @@
 			children = (
 				D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */,
 				D1BD6A322289B1A400797A0E /* QuantityTests.swift */,
+				D1BD6A362289BB3000797A0E /* ValueTests.swift */,
 			);
 			path = JsonTests;
 			sourceTree = "<group>";
@@ -906,6 +911,7 @@
 				D12549AA22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E42281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E12281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
+				D1BD6A382289BB3000797A0E /* ValueTests.swift in Sources */,
 				D19AD0652285D09D002E933D /* RLPEncoderTests.swift in Sources */,
 				D12549A52285FFB70025277B /* RLPItemTests.swift in Sources */,
 				92C649DB2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
@@ -987,6 +993,7 @@
 				D12549AB22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E52281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E22281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
+				D1BD6A392289BB3000797A0E /* ValueTests.swift in Sources */,
 				D19AD0662285D09D002E933D /* RLPEncoderTests.swift in Sources */,
 				D12549A62285FFB70025277B /* RLPItemTests.swift in Sources */,
 				92C649DC2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,
@@ -1037,6 +1044,7 @@
 				D12549A922860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E32281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E02281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
+				D1BD6A372289BB3000797A0E /* ValueTests.swift in Sources */,
 				D19AD0642285D09D002E933D /* RLPEncoderTests.swift in Sources */,
 				D12549A42285FFB70025277B /* RLPItemTests.swift in Sources */,
 				92C649DA2281EA6B00F547C3 /* ABIConvertibleTests.swift in Sources */,

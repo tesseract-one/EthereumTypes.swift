@@ -43,7 +43,6 @@ class EthDataTests: XCTestCase {
             XCTAssertEqual(err as! ValueInitializableError, ValueInitializableError.notInitializable, "should be invalid initialization")
         }
         XCTAssertThrowsError(try EthData(ethereumValue: "//()...")) { err in
-            print(err)
             XCTAssertEqual(err as! EthData.Error, EthData.Error.hexIsMalformed, "should be invalid initialization")
         }
         
