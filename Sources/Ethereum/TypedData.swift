@@ -202,9 +202,9 @@ extension TypedData {
 
 private extension TypedData.Domain {
     var serialized: SerializableValue {
-        return SerializableValue([
+        return [
             "name": name, "version": version,
             "chainId": chainId, "verifyingContract": verifyingContract.hex(eip55: false)
-        ])
+        ]
     }
 }
