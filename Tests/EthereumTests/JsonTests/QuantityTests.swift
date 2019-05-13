@@ -55,7 +55,7 @@ class QuantityTests: XCTestCase {
         XCTAssertEqual(q5?.hex, "0xabcdef", "should produce minimized hex strings")
     }
     
-    func testHashable() {
+    func testHashability() {
         let q1 = Quantity(data: Data([0x25, 0xcc, 0xe9, 0xf5]))
         XCTAssertEqual(q1.hashValue, Quantity(data: Data([0x25, 0xcc, 0xe9, 0xf5])).hashValue, "should produce correct hashValues")
         

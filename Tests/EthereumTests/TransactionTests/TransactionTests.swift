@@ -12,7 +12,7 @@ import XCTest
 
 class TransactionTests: XCTestCase {
 
-    func testTransaction() {
+    func testRlpEncoding() {
         let to = try? Address(hex: "0xf5745ddac99ee7b70518a9035c00cfd63c490b1d")
         XCTAssertNotNil(to, "should produce the expected rlp encoding")
         let tx1 = try? Transaction(nonce: 0, gasPrice: Quantity(21 * BigUInt(10).power(9)), gas: 21000, to: to, value: Quantity(BigUInt(10).power(18)))

@@ -20,7 +20,7 @@ class RLPItemTests: XCTestCase {
         XCTAssertEqual(uint, int, message)
     }
     
-    func testRlpItems() {
+    func testReadingAndWriting() {
         self.expectNumber(15, message: "should be int 15")
         self.expectNumber(1000, message: "should be int 1000")
         self.expectNumber(65537, message: "should be int 65537")

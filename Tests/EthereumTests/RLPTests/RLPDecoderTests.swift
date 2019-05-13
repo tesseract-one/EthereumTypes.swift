@@ -13,7 +13,7 @@ import XCTest
 class RLPDecoderTests: XCTestCase {
     let decoder = RLPDecoder()
     
-    func testRlpDecoding() {
+    func testStringsAndBytes() {
         let bytes1: Data = Data([0x83, 0x64, 0x6f, 0x67])
         let i1 = try? decoder.decode(bytes1)
         XCTAssertNotNil(i1, "should be dog")
@@ -69,54 +69,56 @@ class RLPDecoderTests: XCTestCase {
         XCTAssertEqual(item7.array?[safe: 6]?.bytes, Data([0x26]), "should be a signed transaction")
         XCTAssertEqual(item7.array?[safe: 7]?.bytes, Data([0x63, 0xb2, 0xed, 0xbb, 0xa0, 0x5d, 0x7b, 0x2e, 0x26, 0xd9, 0x71, 0x74, 0x55, 0x34, 0x78, 0x72, 0x4b, 0x9c, 0x30, 0x53, 0x23, 0xa6, 0x7f, 0xee, 0x43, 0xfd, 0x33, 0x3a, 0x1e, 0x33, 0x6f, 0x6]), "should be a signed transaction")
         XCTAssertEqual(item7.array?[safe: 8]?.bytes, Data([0x38, 0x98, 0x74, 0x85, 0x8c, 0x39, 0xfd, 0xdf, 0x54, 0x37, 0x22, 0xd, 0x90, 0x53, 0x1c, 0x64, 0x9f, 0xd, 0xa5, 0x92, 0x40, 0x3d, 0xf0, 0xc1, 0x91, 0x5c, 0xb0, 0xf7, 0x20, 0x53, 0x5e, 0xa]), "should be a signed transaction")
+    }
+    
+    func testListItems() {
+        let rlp1 = Data([0xc8, 0x83, 0x63, 0x61, 0x74, 0x83, 0x64, 0x6f, 0x67])
+        let i1 = try? decoder.decode(rlp1)
+        XCTAssertNotNil(i1, "should be cat and dog")
+        guard let item1 = i1 else { return }
+        let a1 = item1.array
+        XCTAssertNotNil(a1, "should be cat and dog")
+        guard let arr1 = a1 else { return }
+        XCTAssertEqual(arr1.count, 2, "should be cat and dog")
+        guard arr1.count == 2 else { return }
+        XCTAssertEqual(arr1[0].bytes, Data([0x63, 0x61, 0x74]), "should be cat and dog")
+        XCTAssertEqual(arr1[0].string, "cat", "should be cat and dog")
+        XCTAssertEqual(arr1[1].bytes, Data([0x64, 0x6f, 0x67]), "should be cat and dog")
+        XCTAssertEqual(arr1[1].string, "dog", "should be cat and dog")
         
-        let rlp8 = Data([0xc8, 0x83, 0x63, 0x61, 0x74, 0x83, 0x64, 0x6f, 0x67])
-        let i8 = try? decoder.decode(rlp8)
-        XCTAssertNotNil(i8, "should be cat and dog")
-        guard let item8 = i8 else { return }
-        let a8 = item8.array
-        XCTAssertNotNil(a8, "should be cat and dog")
-        guard let arr8 = a8 else { return }
-        XCTAssertEqual(arr8.count, 2, "should be cat and dog")
-        guard arr8.count == 2 else { return }
-        XCTAssertEqual(arr8[0].bytes, Data([0x63, 0x61, 0x74]), "should be cat and dog")
-        XCTAssertEqual(arr8[0].string, "cat", "should be cat and dog")
-        XCTAssertEqual(arr8[1].bytes, Data([0x64, 0x6f, 0x67]), "should be cat and dog")
-        XCTAssertEqual(arr8[1].string, "dog", "should be cat and dog")
+        let i2 = try? decoder.decode(Data([0xc0]))
+        XCTAssertNotNil(i2, "should be the empty list")
+        guard let item2 = i2 else { return }
+        XCTAssertNotNil(item2, "should be the empty list")
+        XCTAssertEqual(item2.array?.count, 0, "should be the empty list")
         
-        let i9 = try? decoder.decode(Data([0xc0]))
-        XCTAssertNotNil(i9, "should be the empty list")
-        guard let item9 = i9 else { return }
-        XCTAssertNotNil(item9, "should be the empty list")
-        XCTAssertEqual(item9.array?.count, 0, "should be the empty list")
+        let rlp3 = Data([0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0])
+        let i3 = try? decoder.decode(rlp3)
+        XCTAssertNotNil(i3, "should be the set theoretical representation of three")
+        guard let item3 = i3 else { return }
+        XCTAssertEqual(item3.array?.count, 3, "should be the set theoretical representation of three")
+        XCTAssertEqual(item3.array?[safe: 0]?.array?.count, 0, "should be the set theoretical representation of three")
+        XCTAssertEqual(item3.array?[safe: 1]?.array?.count, 1, "should be the set theoretical representation of three")
+        XCTAssertEqual(item3.array?[safe: 1]?.array?[safe: 0]?.array?.count, 0, "should be the set theoretical representation of three")
+        XCTAssertEqual(item3.array?[safe: 2]?.array?.count, 2, "should be the set theoretical representation of three")
+        XCTAssertEqual(item3.array?[safe: 2]?.array?[safe: 0]?.array?.count, 0, "should be the set theoretical representation of three")
+        XCTAssertEqual(item3.array?[safe: 2]?.array?[safe: 1]?.array?.count, 1, "should be the set theoretical representation of three")
+        XCTAssertEqual(item3.array?[safe: 2]?.array?[safe: 1]?.array?[safe: 0]?.array?.count, 0, "should be the set theoretical representation of three")
         
-        let rlp10 = Data([0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0])
-        let i10 = try? decoder.decode(rlp10)
-        XCTAssertNotNil(i10, "should be the set theoretical representation of three")
-        guard let item10 = i10 else { return }
-        XCTAssertEqual(item10.array?.count, 3, "should be the set theoretical representation of three")
-        XCTAssertEqual(item10.array?[safe: 0]?.array?.count, 0, "should be the set theoretical representation of three")
-        XCTAssertEqual(item10.array?[safe: 1]?.array?.count, 1, "should be the set theoretical representation of three")
-        XCTAssertEqual(item10.array?[safe: 1]?.array?[safe: 0]?.array?.count, 0, "should be the set theoretical representation of three")
-        XCTAssertEqual(item10.array?[safe: 2]?.array?.count, 2, "should be the set theoretical representation of three")
-        XCTAssertEqual(item10.array?[safe: 2]?.array?[safe: 0]?.array?.count, 0, "should be the set theoretical representation of three")
-        XCTAssertEqual(item10.array?[safe: 2]?.array?[safe: 1]?.array?.count, 1, "should be the set theoretical representation of three")
-        XCTAssertEqual(item10.array?[safe: 2]?.array?[safe: 1]?.array?[safe: 0]?.array?.count, 0, "should be the set theoretical representation of three")
-        
-        let str11 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-        let strBytes11 = str11.data(using: .utf8)!
-        var rlp11 = Data([0xf8, 0x74])
+        let str4 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+        let strBytes4 = str4.data(using: .utf8)!
+        var rlp4 = Data([0xf8, 0x74])
         for _ in 0..<2 {
-            rlp11.append(0xb8)
-            rlp11.append(0x38)
-            for b in strBytes11 { rlp11.append(b) }
+            rlp4.append(0xb8)
+            rlp4.append(0x38)
+            for b in strBytes4 { rlp4.append(b) }
         }
-        let item11 = try? decoder.decode(rlp11)
-        XCTAssertNotNil(item11, "should be an array of long latin strings")
-        XCTAssertEqual(item11?.array?[safe: 0]?.bytes, strBytes11, "should be an array of long latin strings")
-        XCTAssertEqual(item11?.array?[safe: 0]?.string, str11, "should be an array of long latin strings")
-        XCTAssertEqual(item11?.array?[safe: 1]?.bytes, strBytes11, "should be an array of long latin strings")
-        XCTAssertEqual(item11?.array?[safe: 1]?.string, str11, "should be an array of long latin strings")
+        let item4 = try? decoder.decode(rlp4)
+        XCTAssertNotNil(item4, "should be an array of long latin strings")
+        XCTAssertEqual(item4?.array?[safe: 0]?.bytes, strBytes4, "should be an array of long latin strings")
+        XCTAssertEqual(item4?.array?[safe: 0]?.string, str4, "should be an array of long latin strings")
+        XCTAssertEqual(item4?.array?[safe: 1]?.bytes, strBytes4, "should be an array of long latin strings")
+        XCTAssertEqual(item4?.array?[safe: 1]?.string, str4, "should be an array of long latin strings")
     }
 }
 

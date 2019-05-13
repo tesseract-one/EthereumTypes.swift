@@ -12,7 +12,7 @@ import XCTest
 
 class UIntBytesRepresentableTests: XCTestCase {
     
-    func testUintDataRepresentation() {
+    func testSpecialCases() {
         let zero = UInt(0).data
         XCTAssertEqual(zero.count, MemoryLayout<UInt>.size, "should be zero")
         guard zero.count == MemoryLayout<UInt>.size else { return }
@@ -27,7 +27,9 @@ class UIntBytesRepresentableTests: XCTestCase {
         for i in 0..<MemoryLayout<UInt>.size {
             XCTAssertEqual(max[i], 0xff, "should be uint max")
         }
-        
+    }
+    
+    func testTwoBytes() {
         let two = UInt(1024).data
         XCTAssertEqual(two.count, MemoryLayout<UInt>.size, "should be 0x0400")
         guard two.count == MemoryLayout<UInt>.size else { return }

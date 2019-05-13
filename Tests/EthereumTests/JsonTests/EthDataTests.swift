@@ -22,7 +22,7 @@ class EthDataTests: XCTestCase {
         XCTAssertEqual(data1.hashValue, data2.hashValue, "should produce correct hashValues")
     }
     
-    func testEthValueConvertible() {
+    func testValueConvertibility() {
         let data1 = try? EthData(ethereumValue: "0x01020304ff")
         XCTAssertNotNil(data1, "should initialize correctly")
         XCTAssertEqual(data1?.data, Data([0x01, 0x02, 0x03, 0x04, 0xff]), "should initialize correctly")

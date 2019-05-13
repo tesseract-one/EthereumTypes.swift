@@ -43,7 +43,7 @@ class RLPEncoderTests: XCTestCase {
         XCTAssertEqual(rlp, stringBytes, "expectGeneralRLPString: rlp should be as string bytes")
     }
     
-    func testRlpEncoding() {
+    func testStringsAndBytes() {
         let r1 = try? encoder.encode("dog")
         guard let rlp1 = self.expectCount(r1, count: 4) else { return }
         XCTAssertEqual(rlp1[0], 0x83, "should be dog as rlp")
@@ -76,42 +76,44 @@ class RLPEncoderTests: XCTestCase {
         XCTAssertEqual(rlp6[1], 0x38, "should be the long latin string")
         let rlpString6 = rlp6[2..<58]
         self.expectGeneralRLPString(string: str6, rlp: rlpString6)
+    }
+    
+    func testListItems() {
+        let r1 = try? encoder.encode(["cat", "dog"])
+        guard let rlp1 = self.expectCount(r1, count: 9) else { return }
+        XCTAssertEqual(rlp1[0], 0xc8, "should be cat and dog as rlp list")
+        let cat1 = rlp1[1..<5]
+        self.expectBasicRLPString(prefix: 0x83, string: "cat", rlp: cat1)
+        let dog1 = rlp1[5..<9]
+        self.expectBasicRLPString(prefix: 0x83, string: "dog", rlp: dog1)
         
-        let r7 = try? encoder.encode(["cat", "dog"])
-        guard let rlp7 = self.expectCount(r7, count: 9) else { return }
-        XCTAssertEqual(rlp7[0], 0xc8, "should be cat and dog as rlp list")
-        let cat7 = rlp7[1..<5]
-        self.expectBasicRLPString(prefix: 0x83, string: "cat", rlp: cat7)
-        let dog7 = rlp7[5..<9]
-        self.expectBasicRLPString(prefix: 0x83, string: "dog", rlp: dog7)
+        let r2 = try? encoder.encode([])
+        guard let rlp2 = self.expectCount(r2, count: 1) else { return }
+        XCTAssertEqual(rlp2[0], 0xc0, "should be the empty list")
         
-        let r8 = try? encoder.encode([])
-        guard let rlp8 = self.expectCount(r8, count: 1) else { return }
-        XCTAssertEqual(rlp8[0], 0xc0, "should be the empty list")
+        let r3 = try? encoder.encode([ [], [[]], [ [], [[]] ] ])
+        guard let rlp3 = self.expectCount(r3, count: 8) else { return }
+        XCTAssertEqual(rlp3[0], 0xc7, "should be the set theoretical representation of three")
+        XCTAssertEqual(rlp3[1], 0xc0, "should be the set theoretical representation of three")
+        XCTAssertEqual(rlp3[2], 0xc1, "should be the set theoretical representation of three")
+        XCTAssertEqual(rlp3[3], 0xc0, "should be the set theoretical representation of three")
+        XCTAssertEqual(rlp3[4], 0xc3, "should be the set theoretical representation of three")
+        XCTAssertEqual(rlp3[5], 0xc0, "should be the set theoretical representation of three")
+        XCTAssertEqual(rlp3[6], 0xc1, "should be the set theoretical representation of three")
+        XCTAssertEqual(rlp3[7], 0xc0, "should be the set theoretical representation of three")
         
-        let r9 = try? encoder.encode([ [], [[]], [ [], [[]] ] ])
-        guard let rlp9 = self.expectCount(r9, count: 8) else { return }
-        XCTAssertEqual(rlp9[0], 0xc7, "should be the set theoretical representation of three")
-        XCTAssertEqual(rlp9[1], 0xc0, "should be the set theoretical representation of three")
-        XCTAssertEqual(rlp9[2], 0xc1, "should be the set theoretical representation of three")
-        XCTAssertEqual(rlp9[3], 0xc0, "should be the set theoretical representation of three")
-        XCTAssertEqual(rlp9[4], 0xc3, "should be the set theoretical representation of three")
-        XCTAssertEqual(rlp9[5], 0xc0, "should be the set theoretical representation of three")
-        XCTAssertEqual(rlp9[6], 0xc1, "should be the set theoretical representation of three")
-        XCTAssertEqual(rlp9[7], 0xc0, "should be the set theoretical representation of three")
-        
-        let str10 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-        let r10 = try? encoder.encode([.string(str10), .string(str10)])
-        guard let rlp10 = self.expectCount(r10, count: 118) else { return }
-        XCTAssertEqual(rlp10[0], 0xf8, "should be an array of long latin strings")
-        XCTAssertEqual(rlp10[1], 0x74, "should be an array of long latin strings")
-        XCTAssertEqual(rlp10[2], 0xb8, "should be an array of long latin strings")
-        XCTAssertEqual(rlp10[3], 0x38, "should be an array of long latin strings")
-        let rlpStringOne10 = rlp10[4..<60]
-        self.expectGeneralRLPString(string: str10, rlp: rlpStringOne10)
-        XCTAssertEqual(rlp10[60], 0xb8, "should be an array of long latin strings")
-        XCTAssertEqual(rlp10[61], 0x38, "should be an array of long latin strings")
-        let rlpStringTwo10 = rlp10[62..<118]
-        self.expectGeneralRLPString(string: str10, rlp: rlpStringTwo10)
+        let str4 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+        let r4 = try? encoder.encode([.string(str4), .string(str4)])
+        guard let rlp4 = self.expectCount(r4, count: 118) else { return }
+        XCTAssertEqual(rlp4[0], 0xf8, "should be an array of long latin strings")
+        XCTAssertEqual(rlp4[1], 0x74, "should be an array of long latin strings")
+        XCTAssertEqual(rlp4[2], 0xb8, "should be an array of long latin strings")
+        XCTAssertEqual(rlp4[3], 0x38, "should be an array of long latin strings")
+        let rlpStringOne4 = rlp4[4..<60]
+        self.expectGeneralRLPString(string: str4, rlp: rlpStringOne4)
+        XCTAssertEqual(rlp4[60], 0xb8, "should be an array of long latin strings")
+        XCTAssertEqual(rlp4[61], 0x38, "should be an array of long latin strings")
+        let rlpStringTwo4 = rlp4[62..<118]
+        self.expectGeneralRLPString(string: str4, rlp: rlpStringTwo4)
     }
 }
