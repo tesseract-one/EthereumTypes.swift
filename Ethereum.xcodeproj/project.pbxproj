@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		922D35F72289BA0E0081B197 /* Data+EthereumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D35F62289BA0E0081B197 /* Data+EthereumTests.swift */; };
+		922D35F82289BA0E0081B197 /* Data+EthereumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D35F62289BA0E0081B197 /* Data+EthereumTests.swift */; };
+		922D35F92289BA0E0081B197 /* Data+EthereumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D35F62289BA0E0081B197 /* Data+EthereumTests.swift */; };
 		927C59B8224D0BE800F2AA50 /* Ethereum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927C59AE224D0BE800F2AA50 /* Ethereum.framework */; };
 		927C59D2224D0CF000F2AA50 /* SignProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59CA224D0CF000F2AA50 /* SignProvider.swift */; };
 		927C59D7224D0CF000F2AA50 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C59D0224D0CF000F2AA50 /* Transaction.swift */; };
@@ -238,6 +241,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		922D35F62289BA0E0081B197 /* Data+EthereumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+EthereumTests.swift"; sourceTree = "<group>"; };
 		927C59AE224D0BE800F2AA50 /* Ethereum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ethereum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		927C59B2224D0BE800F2AA50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		927C59B7224D0BE800F2AA50 /* EthereumTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EthereumTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -559,6 +563,7 @@
 		D1BD6A2322899EA200797A0E /* ToolboxTests */ = {
 			isa = PBXGroup;
 			children = (
+				922D35F62289BA0E0081B197 /* Data+EthereumTests.swift */,
 				D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */,
 			);
 			path = ToolboxTests;
@@ -895,6 +900,7 @@
 			files = (
 				92C649DE2281EA6B00F547C3 /* ABITests.swift in Sources */,
 				D188B6F522861B2B00E5EE99 /* TransactionTests.swift in Sources */,
+				922D35F82289BA0E0081B197 /* Data+EthereumTests.swift in Sources */,
 				D19AD0692285E24C002E933D /* RLPDecoderTests.swift in Sources */,
 				D1BD6A2B2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */,
 				D12549AA22860AA10025277B /* AddressTests.swift in Sources */,
@@ -975,6 +981,7 @@
 			files = (
 				92C649DF2281EA6B00F547C3 /* ABITests.swift in Sources */,
 				D188B6F622861B2B00E5EE99 /* TransactionTests.swift in Sources */,
+				922D35F92289BA0E0081B197 /* Data+EthereumTests.swift in Sources */,
 				D19AD06A2285E24C002E933D /* RLPDecoderTests.swift in Sources */,
 				D1BD6A2C2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */,
 				D12549AB22860AA10025277B /* AddressTests.swift in Sources */,
@@ -1024,6 +1031,7 @@
 			files = (
 				92C649DD2281EA6B00F547C3 /* ABITests.swift in Sources */,
 				D188B6F422861B2B00E5EE99 /* TransactionTests.swift in Sources */,
+				922D35F72289BA0E0081B197 /* Data+EthereumTests.swift in Sources */,
 				D19AD0682285E24C002E933D /* RLPDecoderTests.swift in Sources */,
 				D1BD6A2A2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */,
 				D12549A922860AA10025277B /* AddressTests.swift in Sources */,
