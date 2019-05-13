@@ -163,6 +163,9 @@
 		D19AD0682285E24C002E933D /* RLPDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AD0672285E24C002E933D /* RLPDecoderTests.swift */; };
 		D19AD0692285E24C002E933D /* RLPDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AD0672285E24C002E933D /* RLPDecoderTests.swift */; };
 		D19AD06A2285E24C002E933D /* RLPDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AD0672285E24C002E933D /* RLPDecoderTests.swift */; };
+		D1BD6A2A2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */; };
+		D1BD6A2B2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */; };
+		D1BD6A2C2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +291,7 @@
 		D188B6F322861B2B00E5EE99 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		D19AD0632285D09D002E933D /* RLPEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPEncoderTests.swift; sourceTree = "<group>"; };
 		D19AD0672285E24C002E933D /* RLPDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPDecoderTests.swift; sourceTree = "<group>"; };
+		D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uint+DataRepresentableTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +421,7 @@
 		927C59BB224D0BE800F2AA50 /* EthereumTests */ = {
 			isa = PBXGroup;
 			children = (
+				D1BD6A2322899EA200797A0E /* ToolboxTests */,
 				D12549A722860A840025277B /* TransactionTests */,
 				D19AD0622285D005002E933D /* RLPTests */,
 				92C649D52281EA4000F547C3 /* ABITests */,
@@ -544,6 +549,14 @@
 				D12549A32285FFB70025277B /* RLPItemTests.swift */,
 			);
 			path = RLPTests;
+			sourceTree = "<group>";
+		};
+		D1BD6A2322899EA200797A0E /* ToolboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */,
+			);
+			path = ToolboxTests;
 			sourceTree = "<group>";
 		};
 		F718DA00E8DE85304C9ACA48 /* Frameworks */ = {
@@ -870,6 +883,7 @@
 				92C649DE2281EA6B00F547C3 /* ABITests.swift in Sources */,
 				D188B6F522861B2B00E5EE99 /* TransactionTests.swift in Sources */,
 				D19AD0692285E24C002E933D /* RLPDecoderTests.swift in Sources */,
+				D1BD6A2B2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */,
 				D12549AA22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E42281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E12281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
@@ -948,6 +962,7 @@
 				92C649DF2281EA6B00F547C3 /* ABITests.swift in Sources */,
 				D188B6F622861B2B00E5EE99 /* TransactionTests.swift in Sources */,
 				D19AD06A2285E24C002E933D /* RLPDecoderTests.swift in Sources */,
+				D1BD6A2C2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */,
 				D12549AB22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E52281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E22281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
@@ -995,6 +1010,7 @@
 				92C649DD2281EA6B00F547C3 /* ABITests.swift in Sources */,
 				D188B6F422861B2B00E5EE99 /* TransactionTests.swift in Sources */,
 				D19AD0682285E24C002E933D /* RLPDecoderTests.swift in Sources */,
+				D1BD6A2A2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */,
 				D12549A922860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E32281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E02281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
