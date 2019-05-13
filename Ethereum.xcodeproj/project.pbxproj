@@ -169,6 +169,9 @@
 		D1BD6A2F2289AA4F00797A0E /* EthDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */; };
 		D1BD6A302289AA4F00797A0E /* EthDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */; };
 		D1BD6A312289AA4F00797A0E /* EthDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */; };
+		D1BD6A332289B1A400797A0E /* QuantityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A322289B1A400797A0E /* QuantityTests.swift */; };
+		D1BD6A342289B1A400797A0E /* QuantityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A322289B1A400797A0E /* QuantityTests.swift */; };
+		D1BD6A352289B1A400797A0E /* QuantityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A322289B1A400797A0E /* QuantityTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -296,6 +299,7 @@
 		D19AD0672285E24C002E933D /* RLPDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPDecoderTests.swift; sourceTree = "<group>"; };
 		D1BD6A292289A17600797A0E /* Uint+DataRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uint+DataRepresentableTests.swift"; sourceTree = "<group>"; };
 		D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthDataTests.swift; sourceTree = "<group>"; };
+		D1BD6A322289B1A400797A0E /* QuantityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -568,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				D1BD6A2E2289AA4F00797A0E /* EthDataTests.swift */,
+				D1BD6A322289B1A400797A0E /* QuantityTests.swift */,
 			);
 			path = JsonTests;
 			sourceTree = "<group>";
@@ -897,6 +902,7 @@
 				D188B6F522861B2B00E5EE99 /* TransactionTests.swift in Sources */,
 				D19AD0692285E24C002E933D /* RLPDecoderTests.swift in Sources */,
 				D1BD6A2B2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */,
+				D1BD6A342289B1A400797A0E /* QuantityTests.swift in Sources */,
 				D12549AA22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E42281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E12281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
@@ -977,6 +983,7 @@
 				D188B6F622861B2B00E5EE99 /* TransactionTests.swift in Sources */,
 				D19AD06A2285E24C002E933D /* RLPDecoderTests.swift in Sources */,
 				D1BD6A2C2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */,
+				D1BD6A352289B1A400797A0E /* QuantityTests.swift in Sources */,
 				D12549AB22860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E52281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E22281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,
@@ -1026,6 +1033,7 @@
 				D188B6F422861B2B00E5EE99 /* TransactionTests.swift in Sources */,
 				D19AD0682285E24C002E933D /* RLPDecoderTests.swift in Sources */,
 				D1BD6A2A2289A17600797A0E /* Uint+DataRepresentableTests.swift in Sources */,
+				D1BD6A332289B1A400797A0E /* QuantityTests.swift in Sources */,
 				D12549A922860AA10025277B /* AddressTests.swift in Sources */,
 				92C649E32281EA6B00F547C3 /* SolidityTypeTests.swift in Sources */,
 				92C649E02281EA6B00F547C3 /* WrappedValueTests.swift in Sources */,

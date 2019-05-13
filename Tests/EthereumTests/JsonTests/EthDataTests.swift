@@ -47,9 +47,9 @@ class EthDataTests: XCTestCase {
             XCTAssertEqual(err as! EthData.Error, EthData.Error.hexIsMalformed, "should be invalid initialization")
         }
         
-        let data3 = try? EthData.string("0xabffcc").data
+        let data3 = Value.string("0xabffcc").data
         XCTAssertNotNil(data3, "should return correct data")
-        XCTAssertEqual(data3?.trimmedHex, "0xabffcc", "should return correct data")
+        XCTAssertEqual(data3?.hex, "0xabffcc", "should return correct data")
         XCTAssertEqual(data3?.data, Data([0xab, 0xff, 0xcc]), "should return correct data")
     }
 }
