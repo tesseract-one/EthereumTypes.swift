@@ -25,7 +25,7 @@ Base types, definitions and protocols for Ethereum support in Tesseract Platform
 
   s.swift_versions = ['5.0']
 
-  s.dependency 'BigInt', '~> 5.0'
-  s.dependency 'CryptoSwift', '~> 1.0'
-  s.dependency 'Serializable.swift', '~> 0.1'
+  s.dependency 'BigInt', '~> 5.0.0'
+  s.dependency 'CryptoSwift', '~> 1.0.0'
+  s.dependency 'Serializable.swift', '~> 0.1.0'
 end
